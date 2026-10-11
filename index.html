@@ -1,0 +1,3444 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diamonds Pet World - Spa & Pet Shop</title>
+
+    <meta name="description" content="Diamonds Pet World - Spa, cắt tỉa, làm đẹp, khách sạn và cửa hàng thú cưng tại 42 Lê Hồng Phong, Hội An Tây, Đà Nẵng. Mở cửa 08:00 - 18:00 mỗi ngày.">
+    <meta name="theme-color" content="#e91e73">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diamonds Pet World - Spa & Pet Shop Hội An">
+    <meta property="og:description" content="Spa, cắt tỉa, làm đẹp, khách sạn và cửa hàng thú cưng tại 42 Lê Hồng Phong, Hội An Tây, Đà Nẵng. Đặt lịch và đặt hàng online.">
+    <meta property="og:locale" content="vi_VN">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"PetStore","name":"Diamonds Pet World","telephone":"+84347654648","address":{"@type":"PostalAddress","streetAddress":"42 Lê Hồng Phong","addressLocality":"Hội An Tây","addressRegion":"Đà Nẵng","postalCode":"51000","addressCountry":"VN"},"openingHours":"Mo-Su 08:00-18:00"}
+    </script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #fff4fa;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #e91e73;
+            border-bottom: 6px solid #111;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-banner {
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            background: white;
+            border: 5px solid #111;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 5px 5px 0 #111;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        .logo .paw {
+            font-size: 38px;
+        }
+
+        .logo h2 {
+            color: #e91e73;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .logo p {
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .banner-text {
+            text-align: center;
+        }
+
+        .banner-text h1 {
+            font-size: clamp(32px, 5vw, 60px);
+            color: #fff900;
+            font-weight: 1000;
+            -webkit-text-stroke: 2px #111;
+            text-shadow: 5px 5px 0 #111;
+            letter-spacing: 2px;
+            animation: titlePop 1s ease;
+        }
+
+        .banner-text h3 {
+            margin-top: 10px;
+            color: white;
+            font-size: clamp(16px, 2vw, 25px);
+            font-weight: 900;
+            background: #111;
+            display: inline-block;
+            padding: 8px 18px;
+            transform: rotate(-1deg);
+        }
+
+        .pet-decoration {
+            font-size: 75px;
+            animation: petMove 3s ease-in-out infinite;
+        }
+
+        /* ================= MENU ================= */
+
+        nav {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            background: #fff900;
+            color: #111;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 480px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background:
+                radial-gradient(circle at 90% 20%, #ffb6d9 0 10%, transparent 11%),
+                linear-gradient(135deg, #fff0f7, #ffd2e6);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content span {
+            background: #111;
+            color: #fff900;
+            padding: 8px 15px;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+
+        .hero h2 {
+            font-size: clamp(40px, 6vw, 75px);
+            margin: 20px 0;
+            line-height: 1;
+            color: #e91e73;
+            font-weight: 1000;
+            -webkit-text-stroke: 1px #111;
+            text-shadow: 5px 5px 0 #111;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            border: 3px solid #111;
+            box-shadow: 5px 5px 0 #111;
+            transition: .2s;
+        }
+
+        .btn:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 1px 1px 0 #111;
+        }
+
+        .btn-main {
+            background: #fff900;
+            color: #111;
+        }
+
+        .btn-pink {
+            background: #e91e73;
+            color: white;
+        }
+
+        .hero-pets {
+            font-size: 180px;
+            animation: petFloat 4s ease-in-out infinite;
+        }
+
+        /* ================= TITLE ================= */
+
+        .section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #e91e73;
+            font-weight: 1000;
+            -webkit-text-stroke: 1px #111;
+            text-shadow: 3px 3px 0 #111;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service {
+            background: #fff4fa;
+            border: 4px solid #111;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 7px 7px 0 #e91e73;
+            transition: .3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow: 10px 10px 0 #fff900;
+        }
+
+        .service-icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            line-height: 1.5;
+        }
+
+        .price {
+            color: #e91e73;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            background: #e91e73;
+        }
+
+        .products .section-title h2 {
+            color: #fff900;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border: 4px solid #111;
+            padding: 20px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: scale(1.04);
+        }
+
+        .product-img {
+            height: 160px;
+            background: #fff0f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            border: 2px solid #111;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+        }
+
+        .product-price {
+            color: #e91e73;
+            font-weight: bold;
+            font-size: 22px;
+            margin: 10px;
+        }
+
+        .buy {
+            border: none;
+            background: #fff900;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #111;
+        }
+
+        .buy:hover {
+            background: #111;
+            color: white;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            color: #e91e73;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .about-box {
+            flex: 1;
+            background: #fff900;
+            border: 5px solid #111;
+            padding: 35px;
+            box-shadow: 10px 10px 0 #e91e73;
+        }
+
+        .about-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            line-height: 1.8;
+        }
+
+        /* ================= BOOKING ================= */
+
+        .booking {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .booking h2 {
+            color: #fff900;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .booking p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .booking-form {
+            max-width: 650px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 3px solid #e91e73;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .booking-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .booking-form button {
+            padding: 16px;
+            background: #fff900;
+            border: 3px solid #e91e73;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background: #e91e73;
+            color: white;
+        }
+
+        /* ================= BOOKING NÂNG CẤP ================= */
+
+        .booking-form {
+            max-width: 720px;
+            text-align: left;
+        }
+
+        .booking-form[hidden],
+        .bk-done[hidden],
+        .bk-nav button[hidden] {
+            display: none;
+        }
+
+        .bk-progress {
+            scroll-margin-top: 150px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .bk-dot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            width: 90px;
+            color: #aaa;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .bk-dot span {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 3px solid #e91e73;
+            background: #111;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+
+        .bk-dot.active { color: #fff900; }
+        .bk-dot.active span { background: #fff900; color: #111; }
+        .bk-dot.done span { background: #e91e73; color: #fff; }
+
+        .bk-line {
+            flex: 1;
+            max-width: 80px;
+            height: 3px;
+            background: #e91e73;
+            margin-top: 18px;
+        }
+
+        .bk-step {
+            display: none;
+            gap: 16px;
+        }
+
+        .bk-step.active {
+            display: grid;
+            animation: bkFade .35s ease;
+        }
+
+        @keyframes bkFade {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: none; }
+        }
+
+        .bk-field { display: grid; gap: 6px; }
+
+        .bk-field label,
+        .bk-label {
+            font-weight: bold;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        .bk-field .req, .bk-agree .req { color: #ff6b9e; }
+        .bk-opt { font-weight: normal; color: #bbb; font-size: 13px; }
+        .bk-hint { font-size: 13px; color: #bbb; }
+
+        .bk-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .bk-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .bk-pill { position: relative; cursor: pointer; }
+
+        .booking-form .bk-pill input {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            border: 0;
+        }
+
+        .bk-pill span {
+            display: inline-block;
+            padding: 10px 16px;
+            border: 3px solid #e91e73;
+            border-radius: 30px;
+            background: #1b1b1b;
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+            transition: .2s;
+        }
+
+        .bk-pill:hover span { background: #3a0f26; }
+        .booking-form .bk-pill input:checked + span { background: #fff900; color: #111; }
+        .booking-form .bk-pill input:focus-visible + span { outline: 3px solid #fff; }
+
+        .bk-services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .bk-service { position: relative; cursor: pointer; display: block; }
+
+        .booking-form .bk-service input {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            border: 0;
+        }
+
+        .bk-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            height: 100%;
+            padding: 14px 40px 14px 14px;
+            border: 3px solid #e91e73;
+            background: #1b1b1b;
+            color: #fff;
+            transition: .2s;
+        }
+
+        .bk-card strong { font-size: 16px; }
+        .bk-card em { font-style: normal; font-size: 13px; color: #ffd1e3; }
+        .bk-service:hover .bk-card { background: #3a0f26; }
+
+        .booking-form .bk-service input:checked + .bk-card {
+            background: #fff900;
+            color: #111;
+            box-shadow: 0 0 0 3px #e91e73;
+        }
+
+        .booking-form .bk-service input:checked + .bk-card em { color: #7a1040; }
+
+        .booking-form .bk-service input:checked + .bk-card::after {
+            content: "✓";
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #e91e73;
+        }
+
+        .booking-form .bk-service input:focus-visible + .bk-card { outline: 3px solid #fff; }
+
+        .bk-error {
+            display: none;
+            color: #ff8fb8;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .bk-error.show { display: block; }
+
+        .bk-estimate {
+            display: none;
+            padding: 12px 15px;
+            border: 2px dashed #fff900;
+            color: #fff900;
+            font-weight: bold;
+        }
+        .bk-estimate.show { display: block; }
+
+        .bk-hotel {
+            display: none;
+            padding: 14px;
+            border: 2px dashed #e91e73;
+        }
+        .bk-hotel.show { display: block; }
+
+        .bk-summary {
+            display: grid;
+            gap: 6px;
+            padding: 14px;
+            background: #1b1b1b;
+            border: 2px solid #e91e73;
+            font-size: 15px;
+            color: #fff;
+        }
+        .bk-summary div { display: flex; gap: 8px; flex-wrap: wrap; }
+        .bk-summary b { color: #fff900; }
+
+        .bk-agree {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .booking-form .bk-agree input {
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            margin-top: 2px;
+            flex: none;
+            accent-color: #e91e73;
+        }
+
+        .bk-secure { font-size: 13px; color: #bbb; }
+
+        .bk-nav { display: flex; gap: 12px; margin-top: 5px; }
+        .bk-nav button { flex: 1; }
+        .booking-form .bk-secondary { background: #222; color: #fff; }
+        .booking-form .bk-secondary:hover { background: #e91e73; }
+        .booking-form button:disabled { opacity: .7; cursor: wait; }
+
+        /* Màn hình xác nhận */
+        .bk-done {
+            max-width: 620px;
+            margin: auto;
+            padding: 30px 22px;
+            background: #1b1b1b;
+            border: 3px solid #e91e73;
+            animation: bkFade .5s ease;
+        }
+
+        .bk-check {
+            width: 74px;
+            height: 74px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: #2ecc71;
+            color: #fff;
+            font-size: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bk-done h3 { color: #fff900; font-size: 26px; margin-bottom: 14px; }
+
+        .bk-code {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-bottom: 16px;
+            border: 2px dashed #fff900;
+            font-size: 18px;
+        }
+
+        .bk-done .bk-summary { text-align: left; margin-bottom: 14px; }
+        .bk-done-note { font-size: 15px; color: #ddd; }
+
+        .bk-done-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .bk-done-actions .bk-link,
+        .bk-done-actions button {
+            padding: 14px 20px;
+            background: #fff900;
+            color: #111;
+            border: 3px solid #e91e73;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .bk-done-actions .bk-link:hover,
+        .bk-done-actions button:hover { background: #e91e73; color: #fff; }
+
+        @media (max-width: 600px) {
+            .bk-row, .bk-services { grid-template-columns: 1fr; }
+            .bk-dot { width: 70px; font-size: 11px; }
+            .bk-done h3 { font-size: 21px; }
+        }
+
+        /* ================= GIỎ HÀNG & THANH TOÁN ================= */
+        .cart-badge{display:inline-block;margin-left:4px;padding:2px 8px;border-radius:999px;background:#e91e73;color:#fff;font-size:12px}
+        .buy-now{background:#e91e73!important;color:#fff;margin-top:8px}
+        body.shop-lock{overflow:hidden}
+        .shop-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;opacity:0;pointer-events:none;transition:.25s}
+        .shop-overlay.show{opacity:1;pointer-events:auto}
+        .cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:3100;display:flex;flex-direction:column;transform:translateX(105%);transition:.3s;border-left:4px solid #111}
+        .cart-drawer.show{transform:none}
+        .cd-head,.co-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#e91e73;color:#fff;font-size:18px}
+        .cd-x{background:none;border:0;color:#fff;font-size:22px;cursor:pointer}
+        .cd-ship{padding:10px 16px;background:#fff0f7;font-size:14px}
+        .cd-bar{height:8px;background:#eee;border-radius:9px;margin-top:6px;overflow:hidden}
+        .cd-bar i{display:block;height:100%;background:#2ecc71;width:0;transition:.3s}
+        .cd-all{display:flex;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid #eee;font-weight:bold;cursor:pointer}
+        .cd-list{flex:1;overflow-y:auto;padding:0 16px}
+        .cd-item{display:grid;grid-template-columns:auto 56px 1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eee}
+        .cd-thumb{width:56px;height:56px;background:#fff0f7;border:2px solid #111;display:flex;align-items:center;justify-content:center;font-size:30px;overflow:hidden}
+        .cd-thumb img{width:100%;height:100%;object-fit:cover}
+        .cd-name{font-weight:bold;font-size:14px}.cd-price{color:#e91e73;font-weight:bold;font-size:14px}
+        .cd-qty{display:flex;align-items:center;margin-top:6px}
+        .cd-qty button{width:28px;height:28px;border:2px solid #111;background:#fff;font-weight:bold;cursor:pointer}
+        .cd-qty span{min-width:34px;text-align:center;font-weight:bold}
+        .cd-del{background:none;border:0;font-size:20px;cursor:pointer}
+        .cd-empty{text-align:center;padding:50px 10px;color:#666}.cd-empty div{font-size:64px}
+        .cd-foot{padding:14px 16px;border-top:3px solid #111;background:#fffbe0}
+        .cd-total{display:flex;justify-content:space-between;font-size:18px;margin-bottom:10px}
+        .cd-buy,.co-submit{width:100%;padding:14px;background:#e91e73;color:#fff;border:3px solid #111;font-size:17px;font-weight:bold;cursor:pointer}
+        .cd-buy:disabled,.co-submit:disabled{background:#bbb;cursor:not-allowed}
+        .cd-more{display:block;text-align:center;margin-top:10px;color:#111;font-size:14px}
+        .co-modal{position:fixed;inset:0;z-index:3200;display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;background:rgba(0,0,0,.6);padding:20px 10px}
+        .co-modal[hidden]{display:none}
+        .co-box{width:min(620px,100%);background:#fff;border:4px solid #111}
+        .co-form,.co-done{padding:16px;display:grid;gap:12px}
+        .co-form h4{margin-top:6px;color:#e91e73;font-size:17px}
+        .co-form input[type=text],.co-form input[type=tel],.co-form textarea{width:100%;padding:12px;border:3px solid #e91e73;font-size:16px}
+        .co-form textarea{height:70px;resize:none}
+        .co-pills{display:flex;flex-wrap:wrap;gap:10px}
+        .co-pill{position:relative;cursor:pointer}
+        .co-pill input{position:absolute;opacity:0;width:1px;height:1px}
+        .co-pill span{display:inline-block;padding:10px 14px;border:3px solid #e91e73;border-radius:30px;font-weight:bold;font-size:15px}
+        .co-pill input:checked+span{background:#fff900}
+        .co-pill input:focus-visible+span{outline:3px solid #111}
+        .co-note{font-size:14px;color:#555;padding:10px;background:#fff0f7;border:2px dashed #e91e73}
+        .co-row{display:flex;justify-content:space-between;gap:10px;font-size:15px;padding:4px 0}
+        .co-row.big{font-size:19px;font-weight:bold;color:#e91e73;border-top:2px solid #111;margin-top:6px;padding-top:10px}
+        .co-vrow{display:flex;gap:8px}.co-vrow button{padding:0 16px;border:3px solid #111;background:#fff900;font-weight:bold;cursor:pointer}
+        .co-done{text-align:center}.co-done h3{color:#e91e73;font-size:24px}
+        .co-code{display:inline-block;padding:8px 16px;border:2px dashed #e91e73;font-size:18px;margin:auto}
+        .co-done img.qr{max-width:260px;width:100%;margin:auto;border:3px solid #111}
+        .co-acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+        .co-acts a,.co-acts button{padding:12px 18px;background:#fff900;border:3px solid #111;font-weight:bold;color:#111;text-decoration:none;cursor:pointer;font-size:15px}
+        .toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,30px);background:#111;color:#fff;padding:12px 18px;border-radius:30px;z-index:3300;opacity:0;pointer-events:none;transition:.3s;font-size:15px;max-width:92%;text-align:center}
+        .toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+        .toast button{margin-left:8px;background:#fff900;border:0;border-radius:20px;padding:4px 12px;font-weight:bold;cursor:pointer}
+        .float-contact{position:fixed;left:16px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:1900}
+        .float-contact a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.35)}
+        .fc-call{background:#2ecc71}.fc-zalo{background:#0068ff;font-size:15px!important;font-weight:bold}
+
+        /* ================= CỬA HÀNG: DANH MỤC + TÌM KIẾM ================= */
+        .product-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+        .product[hidden] { display: none; }
+        .shop-tools { max-width: 1100px; margin: 0 auto 26px; display: grid; gap: 14px; scroll-margin-top: 250px; }
+        .shop-search { position: relative; display: flex; align-items: center; width: 100%; max-width: 620px; margin: 0 auto; background: #fff; border: 3px solid #111; border-radius: 999px; box-shadow: 4px 4px 0 #111; }
+        .shop-search:focus-within { box-shadow: 4px 4px 0 #fff900; }
+        .shop-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 14px 8px 14px 22px; font-size: 16px; color: #111; }
+        .ss-x { border: 0; background: none; font-size: 17px; color: #777; cursor: pointer; padding: 0 10px; }
+        .ss-x[hidden] { display: none; }
+        .ss-go { align-self: stretch; width: 62px; border: 0; border-left: 3px solid #111; border-radius: 0 999px 999px 0; background: #fff900; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: .15s; }
+        .ss-go:hover { background: #111; }
+        .ss-go:hover svg { stroke: #fff900; }
+        .shop-suggest { position: absolute; left: 0; right: 0; top: calc(100% + 10px); background: #fff; border: 3px solid #111; border-radius: 16px; box-shadow: 0 14px 34px rgba(0,0,0,.35); z-index: 1500; overflow-y: auto; text-align: left; }
+        .shop-suggest[hidden] { display: none; }
+        .ss-title { padding: 12px 16px 6px; font-size: 12px; font-weight: 800; color: #888; letter-spacing: .5px; text-transform: uppercase; }
+        .ss-opt { display: flex; align-items: center; gap: 12px; padding: 10px 16px; cursor: pointer; }
+        .ss-opt:hover, .ss-opt.on { background: #ffe9f2; }
+        .ss-thumb { flex: none; width: 46px; height: 46px; border: 2px solid #111; border-radius: 10px; background: #fff0f7; display: flex; align-items: center; justify-content: center; font-size: 26px; overflow: hidden; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .ss-main { flex: 1; min-width: 0; }
+        .ss-name { font-weight: 700; font-size: 15px; color: #111; }
+        .ss-name mark { background: #fff900; color: #111; border-radius: 3px; padding: 0 1px; }
+        .ss-cat { font-size: 12px; color: #888; }
+        .ss-price { font-weight: 800; font-size: 14px; color: #e91e73; white-space: nowrap; }
+        .ss-all { border-top: 2px solid #f0e0e8; padding: 13px 16px; font-weight: 700; color: #c2185b; cursor: pointer; }
+        .ss-all:hover, .ss-all.on { background: #ffe9f2; }
+        .ss-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 14px; }
+        .ss-chip { border: 2px solid #111; background: #fff; border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 13px; cursor: pointer; }
+        .ss-chip:hover { background: #fff900; }
+        .ss-none { padding: 16px 16px 8px; font-size: 14px; color: #555; }
+        .shop-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .shop-tab { border: 3px solid #111; background: #fff; color: #111; border-radius: 999px; padding: 10px 18px; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 3px 3px 0 #111; transition: .15s; }
+        .shop-tab:hover { transform: translateY(-2px); }
+        .shop-tab[aria-selected="true"] { background: #fff900; }
+        .shop-tab small { margin-left: 4px; font-weight: 700; color: #777; }
+        .shop-status { display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 22px; color: #fff; font-size: 14px; }
+        .shop-status button { background: none; border: 2px solid #fff; color: #fff; border-radius: 999px; padding: 3px 12px; font-weight: 700; cursor: pointer; }
+        .shop-status button[hidden] { display: none; }
+        .shop-empty { max-width: 620px; margin: 0 auto; padding: 22px; background: #fff; border: 3px solid #111; border-radius: 16px; text-align: center; color: #222; }
+        .shop-empty[hidden] { display: none; }
+        .shop-empty .se-ico { font-size: 44px; }
+        .shop-empty .se-text { margin: 6px 0 14px; line-height: 1.5; }
+        .shop-empty .se-acts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .shop-empty .se-acts a, .shop-empty .se-acts button { padding: 10px 16px; background: #fff900; border: 3px solid #111; font-weight: 800; font-size: 14px; color: #111; text-decoration: none; cursor: pointer; }
+        @media (max-width: 640px) {
+            .shop-tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; padding: 2px 3px 8px; scrollbar-width: none; }
+            .shop-tab { flex: none; white-space: nowrap; }
+            .shop-tools { scroll-margin-top: 130px; }
+        }
+
+        /* ================= DỊCH VỤ: NÚT, CHI TIẾT, QUY TRÌNH ================= */
+        .service { display: flex; flex-direction: column; cursor: pointer; }
+        .service p { flex: 1; }
+        .service .price { margin-top: auto; padding-top: 15px; }
+        .sv-actions { display: grid; gap: 8px; margin-top: 16px; }
+        .sv-actions button { padding: 11px 10px; border: 3px solid #111; background: #fff; color: #111; font-size: 14px; font-weight: 800; cursor: pointer; transition: .15s; }
+        .sv-actions .sv-book { background: #fff900; }
+        .sv-actions button:hover { background: #e91e73; color: #fff; }
+
+        .sv-steps { max-width: 1100px; margin: 50px auto 0; text-align: center; }
+        .sv-steps-title { font-size: 26px; margin-bottom: 22px; }
+        .sv-steps-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
+        .sv-steps-list li { display: grid; justify-items: center; gap: 8px; padding: 22px 16px 18px; background: #fff; border: 3px solid #111; border-radius: 14px; }
+        .sv-steps-list .n { width: 42px; height: 42px; border: 3px solid #111; border-radius: 50%; background: #e91e73; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+        .sv-steps-list b { font-size: 17px; }
+        .sv-steps-list small { color: #555; font-size: 14px; line-height: 1.5; }
+        .sv-steps-cta { margin-top: 26px; padding: 14px 28px; background: #fff900; border: 3px solid #111; font-size: 16px; font-weight: 800; cursor: pointer; box-shadow: 4px 4px 0 #111; }
+        .sv-steps-cta:hover { background: #e91e73; color: #fff; }
+
+        .sv-modal { position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center; padding: 18px; background: rgba(18,12,17,.66); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .22s, visibility .22s; }
+        .sv-modal.show { opacity: 1; visibility: visible; pointer-events: auto; }
+        .sv-box { position: relative; display: grid; grid-template-columns: minmax(240px, .8fr) minmax(300px, 1.2fr); width: min(900px, 100%); max-height: 92vh; overflow: auto; background: #fff; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,.35); overscroll-behavior: contain; }
+        .sv-close { position: absolute; top: 14px; right: 14px; z-index: 5; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #f4f4f5; color: #222; font-size: 20px; cursor: pointer; }
+        .sv-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 260px; padding: 26px 22px; background: #fff8fb; }
+        .sv-emoji { font-size: 110px; }
+        .sv-main-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #f1e5eb; border-radius: 14px; }
+        .sv-thumbs { display: flex; flex-wrap: wrap; gap: 8px; }
+        .sv-thumbs img { width: 60px; height: 60px; object-fit: cover; border: 2px solid #eadde4; border-radius: 8px; cursor: pointer; }
+        .sv-thumbs img.on { border-color: #e91e73; }
+        .sv-info { display: flex; flex-direction: column; gap: 12px; padding: 28px 30px 24px; }
+        .sv-tag { align-self: flex-start; padding: 6px 11px; border-radius: 30px; background: #ffe7f0; color: #b31259; font-size: 11px; font-weight: 800; letter-spacing: .3px; }
+        .sv-info h2 { padding-right: 34px; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; color: #222; }
+        .sv-price { font-size: 26px; font-weight: 800; color: #e91e73; }
+        .sv-desc { margin: 0; line-height: 1.6; color: #444; }
+        .sv-sec h4 { margin-bottom: 6px; font-size: 15px; color: #222; }
+        .sv-sec ul { padding-left: 20px; line-height: 1.7; color: #444; }
+        .sv-sec p { margin: 0; color: #444; }
+        .sv-row { display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px dashed #e6d5de; color: #444; }
+        .sv-note { padding: 10px 12px; border-radius: 10px; background: #fff7d6; color: #6b5800; font-size: 13px; line-height: 1.5; }
+        .sv-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+        .sv-cta button, .sv-cta a { flex: 1; min-width: 150px; padding: 13px 14px; border: 3px solid #111; background: #fff900; color: #111; text-align: center; text-decoration: none; font-size: 15px; font-weight: 800; cursor: pointer; }
+        .sv-cta a { background: #fff; }
+        .sv-cta button:hover, .sv-cta a:hover { background: #e91e73; color: #fff; }
+        @media (max-width: 700px) {
+            .sv-box { grid-template-columns: 1fr; }
+            .sv-visual { min-height: 0; padding: 20px; }
+            .sv-emoji { font-size: 80px; }
+            .sv-info { padding: 20px; }
+        }
+
+        .bk-pre { display: none; padding: 10px 14px; background: #fff900; border: 3px solid #e91e73; color: #111; font-weight: 800; }
+        .bk-pre.show.at1 { display: block; }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #fff0f7;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            background: white;
+            border: 3px solid #111;
+            padding: 20px 30px;
+            min-width: 220px;
+            box-shadow: 5px 5px 0 #e91e73;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #e91e73;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #e91e73;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-top: 5px solid #111;
+        }
+
+        footer strong {
+            color: #fff900;
+        }
+
+        /* ================= CART ================= */
+
+        .cart {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #fff900;
+            color: #111;
+            border: 4px solid #111;
+            padding: 15px 20px;
+            font-weight: bold;
+            z-index: 2000;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 #111;
+        }
+
+        .cart:hover {
+            transform: scale(1.05);
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes logoFloat {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes titlePop {
+
+            from {
+                transform: scale(.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes petFloat {
+
+            0%,100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(3deg);
+            }
+        }
+
+        @keyframes petMove {
+
+            0%,100% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 700px) {
+
+            .top-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pet-decoration {
+                display: none;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+            .hero-pets {
+                font-size: 100px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+        }
+
+    /* =========================
+   HIỆU ỨNG CLICK
+========================= */
+
+/* Logo có thể click */
+.logo {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng logo khi click */
+.logo.logo-click {
+    animation: logoBounce 0.5s ease;
+}
+
+@keyframes logoBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.15) rotate(-3deg);
+    }
+
+    60% {
+        transform: scale(0.95) rotate(3deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   THÚ CƯNG BAY RA
+========================= */
+
+.pet-effect {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 30px;
+    animation: petFly 1.4s ease-out forwards;
+}
+
+@keyframes petFly {
+
+    0% {
+        opacity: 1;
+        transform:
+            translate(0,0)
+            scale(0.5)
+            rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--x),var(--y))
+            scale(1.3)
+            rotate(var(--rotate));
+    }
+}
+
+
+/* =========================
+   DẤU CHÂN
+========================= */
+
+.paw-effect {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99998;
+    font-size: 22px;
+    animation: pawFade 1s ease-out forwards;
+}
+
+@keyframes pawFade {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-20deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-35px)
+            scale(0.7)
+            rotate(25deg);
+    }
+}
+
+
+/* =========================
+   RIPPLE CHO NÚT
+========================= */
+
+.btn,
+.add-cart,
+.booking button,
+.cart,
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* vòng tròn khi click */
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.65);
+
+    transform: scale(0);
+
+    animation: rippleEffect 0.6s linear;
+
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MENU CLICK
+========================= */
+
+nav a.menu-click {
+    animation: menuJump 0.45s ease;
+}
+
+@keyframes menuJump {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(-4px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   GIỎ HÀNG RUNG
+========================= */
+
+.cart.shake {
+    animation: cartShake 0.6s ease;
+}
+
+@keyframes cartShake {
+
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    40% {
+        transform: rotate(8deg);
+    }
+
+    60% {
+        transform: rotate(-6deg);
+    }
+
+    80% {
+        transform: rotate(6deg);
+    }
+}
+
+
+/* =========================
+   NÚT ĐẶT LỊCH
+========================= */
+
+.booking button.success {
+    animation: successButton 0.7s ease;
+}
+
+@keyframes successButton {
+
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.08);
+    }
+
+    70% {
+        transform: scale(0.96);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+body.pd-lock{overflow:hidden}
+/* ================= CHI TIẾT SẢN PHẨM — QUICK VIEW ================= */
+.product{cursor:default;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px #1112}
+.product-img{border-radius:10px;overflow:hidden;transition:transform .25s;cursor:pointer}
+.product:hover .product-img{transform:scale(1.015)}
+.product h3{cursor:pointer}
+.product-hint{font-size:13px;color:#777;margin:8px 0 12px;cursor:pointer}.product-old-price{font-size:12px;color:#999;text-decoration:line-through;margin-right:7px}.pd-card-discount{display:inline-block;font-size:11px;font-weight:800;color:#c2185b;background:#ffe5ee;border-radius:5px;padding:3px 6px;margin:0 0 8px}.pd-card-badge{display:inline-block;font-size:11px;font-weight:800;color:#b31259;background:#ffe5ee;border-radius:20px;padding:5px 9px;margin:8px 8px 0}
+.product-detail-modal{position:fixed;inset:0;z-index:5000;background:rgba(18,12,17,.66);display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s,visibility .22s}
+.product-detail-modal.show{opacity:1;visibility:visible;pointer-events:auto}
+.pd-box{position:relative;width:min(1080px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 25px 80px #0005;display:grid;grid-template-columns:minmax(280px,.9fr) minmax(340px,1.1fr);animation:pdIn .22s ease;overscroll-behavior:contain}
+@keyframes pdIn{from{transform:translateY(12px);opacity:.65}to{transform:translateY(0);opacity:1}}
+.pd-close{position:absolute;right:14px;top:14px;width:38px;height:38px;border:0;border-radius:50%;background:#f4f4f5;color:#222;font-size:23px;cursor:pointer;z-index:5}
+.pd-gallery{padding:26px 22px;background:#fff8fb;min-width:0}
+.pd-main-image{height:340px;position:relative;display:flex;align-items:center;justify-content:center;border:1px solid #f1e5eb;border-radius:14px;background:#fff;overflow:hidden;cursor:zoom-in}
+.pd-main-image img{width:100%;height:100%;object-fit:contain;display:block;position:relative;z-index:1}
+.pd-main-image .pd-emoji{font-size:118px}
+.pd-skeleton{position:absolute;inset:0;background:linear-gradient(100deg,#f5edf1 20%,#fff 38%,#f5edf1 56%);background-size:200% 100%;animation:pdShimmer 1.25s linear infinite}
+@keyframes pdShimmer{to{background-position:-200% 0}}
+.pd-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:10px}
+.pd-thumb{height:78px;border:1px solid #eadde4;background:#fff;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#777;font-size:11px;text-align:center;padding:5px}
+.pd-thumb.active{border:2px solid #e91e73;color:#bd145b}.pd-thumb img{width:100%;height:100%;object-fit:contain}
+.pd-gallery-note{font-size:11px;color:#888;margin:8px 2px 0}
+.pd-info{padding:28px 30px 22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.pd-tag{align-self:flex-start;background:#ffe7f0;color:#b31259;border-radius:30px;padding:6px 11px;font-size:11px;font-weight:800;letter-spacing:.3px}
+.pd-info h2{font-size:clamp(22px,2.6vw,30px);line-height:1.25;color:#222;padding-right:34px;margin:0}
+.pd-meta{font-size:12px;color:#777;line-height:1.6}.pd-meta b{color:#444}
+.pd-price-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.pd-price{font-size:30px;font-weight:900;color:#e91e73}.pd-old-price{color:#999;text-decoration:line-through;font-size:14px}.pd-discount{background:#ffe5ee;color:#c2185b;padding:4px 7px;border-radius:6px;font-size:12px;font-weight:800}
+.pd-stock{font-size:13px;font-weight:700}.pd-stock.in{color:#16834a}.pd-stock.low{color:#b77910}.pd-stock.out{color:#c62828}
+.pd-select-label{font-size:13px;font-weight:700;margin-bottom:7px}.pd-variants{display:flex;flex-wrap:wrap;gap:8px}.pd-variant{border:1px solid #ddd;border-radius:9px;background:#fff;padding:9px 12px;cursor:pointer;font-size:13px}.pd-variant.active{border:1.5px solid #e91e73;color:#c2185b;background:#fff6fa}.pd-variant:disabled{opacity:.45;cursor:not-allowed}
+.pd-qtyrow{display:flex;align-items:center;gap:9px}.pd-qtyrow b{font-size:13px;margin-right:4px}.pd-qtyrow button{width:35px;height:35px;border:1px solid #ddd;background:#fff;border-radius:8px;font-size:20px;cursor:pointer}.pd-qtyrow input{width:48px;text-align:center;padding:8px;border:1px solid #ddd;border-radius:8px;font-weight:bold}
+.pd-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.pd-actions button,.pd-sticky button{padding:13px 10px;border-radius:10px;border:0;font-weight:800;cursor:pointer;font-size:13px}.pd-add{background:#e91e73;color:#fff}.pd-buy{background:#fff;color:#c2185b;border:1px solid #e91e73!important}.pd-actions button:disabled,.pd-sticky button:disabled{opacity:.45;cursor:not-allowed}
+.pd-secondary-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.pd-secondary-actions a,.pd-secondary-actions button{border:1px solid #e4dce1;background:#fff;border-radius:9px;padding:10px;text-decoration:none;text-align:center;color:#444;font-size:12px;font-weight:700;cursor:pointer}
+.pd-perks{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:12px;background:#faf8f9;border-radius:12px;font-size:11px;color:#666;line-height:1.45}.pd-perks b{display:block;color:#333;font-size:12px;margin-bottom:2px}
+.pd-content{grid-column:1/-1;border-top:1px solid #eee;padding:0 22px 20px}.pd-tabs{display:flex;gap:6px;overflow:auto;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:2}.pd-tab{white-space:nowrap;border:0;border-bottom:2px solid transparent;background:#fff;padding:14px 15px;color:#666;cursor:pointer;font-size:13px}.pd-tab.active{border-bottom-color:#e91e73;color:#c2185b;font-weight:800}.pd-tab-panel{padding:18px 5px;color:#555;font-size:13px;line-height:1.75}.pd-tab-panel ul{padding-left:20px;margin:6px 0}.pd-spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}.pd-spec-grid p{margin:0;padding:7px 0;border-bottom:1px solid #f0edf0}.pd-spec-grid b{color:#333}.pd-rating-empty{background:#faf8f9;padding:12px;border-radius:10px;color:#777}
+.pd-related{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 22px 22px}.pd-related-box{border:1px solid #f0e8ed;border-radius:13px;padding:13px;min-width:0}.pd-related-box h4{margin:0 0 10px;font-size:13px;color:#333}.pd-related-items{display:flex;gap:8px;overflow:auto}.pd-related-item{flex:0 0 125px;border:1px solid #eee;border-radius:10px;background:#fff;padding:9px;text-align:left;cursor:pointer;color:#333}.pd-related-item span{display:block;font-size:25px;margin-bottom:5px}.pd-related-item b{display:block;font-size:11px}.pd-related-item small{color:#c2185b;font-weight:800}
+.pd-added{display:none;align-items:center;justify-content:space-between;gap:10px;background:#edfbf2;color:#176b3a;border-radius:9px;padding:10px 12px;font-size:12px}.pd-added.show{display:flex}.pd-added button{border:1px solid #9ad8b1;background:#fff;color:#176b3a;border-radius:7px;padding:6px 10px;font-weight:700;cursor:pointer}.pd-sticky{display:none}
+.pd-zoom{position:fixed;inset:0;background:#111e;z-index:5100;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}.pd-zoom.show{display:flex}.pd-zoom img{max-width:95vw;max-height:90vh;object-fit:contain;background:#fff;border-radius:10px}
+@media(max-width:700px){.product-detail-modal{align-items:flex-end;padding:0}.pd-box{display:block;width:100%;max-height:95dvh;border-radius:20px 20px 0 0;animation:pdSheet .24s ease;overflow:auto;padding-bottom:76px}.pd-box:before{content:"";display:block;width:42px;height:4px;background:#ddd;border-radius:8px;margin:8px auto 0}.pd-close{position:sticky;float:right;top:10px;margin:0 10px -42px 0}.pd-gallery{padding:14px 14px 10px}.pd-main-image{height:240px}.pd-main-image .pd-emoji{font-size:90px}.pd-thumbs{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.pd-thumb{height:65px}.pd-info{padding:14px 17px 18px;gap:10px}.pd-info h2{font-size:22px}.pd-price{font-size:26px}.pd-content{padding:0 14px 15px}.pd-related{padding:0 14px 18px;grid-template-columns:1fr}.pd-sticky{position:fixed;z-index:5001;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;box-shadow:0 -5px 20px #0000000d;display:flex;align-items:center;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}.pd-sticky-price{font-size:14px;font-weight:900;color:#e91e73;min-width:75px;flex:1}.pd-sticky button{padding:12px 10px;font-size:11px}.pd-sticky .pd-add{flex:1.2}.pd-sticky .pd-buy{flex:1}.pd-perks{grid-template-columns:1fr 1fr}.pd-spec-grid{grid-template-columns:1fr}.pd-secondary-actions{grid-template-columns:1fr 1fr}}
+@keyframes pdSheet{from{transform:translateY(24px);opacity:.7}to{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.product-detail-modal,.pd-box,.pd-main-image .pd-skeleton{animation:none;transition:none}}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="top-banner">
+
+        <div class="logo">
+            <div class="paw">🐾</div>
+            <h2>DIAMONDS</h2>
+            <p>PET WORLD</p>
+        </div>
+
+        <div class="banner-text">
+
+            <h1>THẾ GIỚI THÚ CƯNG</h1>
+
+            <h3>
+                SPA • CẮT TỈA • LÀM ĐẸP • HOTEL
+            </h3>
+
+        </div>
+
+        <div class="pet-decoration">
+            🐶
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">TRANG CHỦ</a>
+        <a href="#services">DỊCH VỤ</a>
+        <a href="#products">CỬA HÀNG</a>
+        <a href="#about">GIỚI THIỆU</a>
+        <a href="#booking">ĐẶT LỊCH</a>
+        <a href="#contact">LIÊN HỆ</a>
+        <a href="#" id="navCart">🛒 GIỎ HÀNG <span class="cart-badge" id="cartBadge">0</span></a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span>🐾 PET CARE CHUYÊN NGHIỆP 🐾</span>
+
+        <h2>
+            YÊU THÚ CƯNG<br>
+            NHƯ NGƯỜI NHÀ!
+        </h2>
+
+        <p>
+            Dịch vụ spa, tắm, cắt tỉa và chăm sóc thú cưng
+            chuyên nghiệp. Ngoài ra còn có thức ăn,
+            đồ chơi và phụ kiện dành cho boss của bạn.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#booking" class="btn btn-main">
+                ✂️ ĐẶT LỊCH NGAY
+            </a>
+
+            <a href="#products" class="btn btn-pink">
+                🛍️ XEM SHOP
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-pets">
+        🐕
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services" id="services">
+
+    <div class="section-title">
+
+        <h2>🐾 DỊCH VỤ CỦA CHÚNG TÔI 🐾</h2>
+
+        <p>
+            Chăm sóc boss từ A đến Z
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service" data-service="Cắt tỉa &amp; tạo kiểu">
+
+            <div class="service-icon">✂️</div>
+
+            <h3>CẮT TỈA & TẠO KIỂU</h3>
+
+            <p>
+                Cắt tỉa lông, tạo kiểu theo yêu cầu,
+                giúp boss luôn đẹp trai xinh gái.
+            </p>
+
+            <div class="price">
+                Từ 100.000đ
+            </div>
+
+        </div>
+
+
+        <div class="service" data-service="Tắm &amp; Spa">
+
+            <div class="service-icon">🛁</div>
+
+            <h3>TẮM & SPA</h3>
+
+            <p>
+                Tắm sạch, sấy khô, vệ sinh tai,
+                móng và chăm sóc da lông.
+            </p>
+
+            <div class="price">
+                Từ 80.000đ
+            </div>
+
+        </div>
+
+
+        <div class="service" data-service="Làm đẹp">
+
+            <div class="service-icon">💅</div>
+
+            <h3>LÀM ĐẸP</h3>
+
+            <p>
+                Vệ sinh móng, tai, răng và
+                chăm sóc ngoại hình cho thú cưng.
+            </p>
+
+            <div class="price">
+                Từ 50.000đ
+            </div>
+
+        </div>
+
+
+        <div class="service" data-service="Khách sạn thú cưng">
+
+            <div class="service-icon">🏨</div>
+
+            <h3>KHÁCH SẠN PET</h3>
+
+            <p>
+                Không gian sạch sẽ, an toàn,
+                chăm sóc boss khi bạn đi xa.
+            </p>
+
+            <div class="price">
+                Từ 150.000đ/ngày
+            </div>
+
+        </div>
+
+
+    </div>
+
+        <div class="sv-steps">
+            <h3 class="sv-steps-title">📅 Đặt lịch chỉ với 4 bước</h3>
+            <ol class="sv-steps-list">
+                <li><span class="n">1</span><b>Chọn dịch vụ</b><small>Chọn dịch vụ cho bé và điền thông tin đặt lịch ngay trên web.</small></li>
+                <li><span class="n">2</span><b>Shop xác nhận</b><small>Shop liên hệ qua số điện thoại hoặc Zalo mà bạn để lại.</small></li>
+                <li><span class="n">3</span><b>Đưa bé đến shop</b><small>42 Lê Hồng Phong, Hội An Tây, Đà Nẵng. Mở cửa 08:00 - 18:00 mỗi ngày.</small></li>
+                <li><span class="n">4</span><b>Bé được chăm sóc</b><small>Dịch vụ được thực hiện theo lịch hẹn đã xác nhận.</small></li>
+            </ol>
+            <button type="button" class="sv-steps-cta" data-goto-booking>📅 ĐẶT LỊCH NGAY</button>
+        </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section products" id="products">
+
+    <div class="section-title">
+
+        <h2>🛍️ SHOP THÚ CƯNG</h2>
+
+        <p style="color:white;">
+            Thức ăn • Đồ chơi • Phụ kiện
+        </p>
+
+    </div>
+
+
+    <div class="shop-tools" id="shopTools">
+
+        <div class="shop-search" role="search">
+            <input id="shopSearch" type="text" placeholder="Tìm sản phẩm: thức ăn, đồ chơi, nơ..." autocomplete="off" enterkeyhint="search"
+                   role="combobox" aria-expanded="false" aria-controls="shopSuggest" aria-autocomplete="list" aria-label="Tìm kiếm sản phẩm">
+            <button type="button" id="shopSearchX" class="ss-x" aria-label="Xóa từ khóa" hidden>✕</button>
+            <button type="button" id="shopSearchBtn" class="ss-go" aria-label="Tìm kiếm">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg>
+            </button>
+            <div class="shop-suggest" id="shopSuggest" role="listbox" hidden></div>
+        </div>
+
+        <div class="shop-tabs" id="shopTabs" role="tablist" aria-label="Danh mục sản phẩm"></div>
+
+        <div class="shop-status"><span id="shopCount"></span><button type="button" id="shopClear" hidden>✕ Xóa bộ lọc</button></div>
+
+        <div class="shop-empty" id="shopEmpty" hidden></div>
+
+    </div>
+
+    <div class="product-grid">
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🥩
+            </div>
+
+            <h3>Thức ăn cho chó</h3>
+
+            <div class="product-price">
+                120.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Thức ăn cho chó', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🐟
+            </div>
+
+            <h3>Thức ăn cho mèo</h3>
+
+            <div class="product-price">
+                135.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Thức ăn cho mèo', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🧸
+            </div>
+
+            <h3>Đồ chơi thú cưng</h3>
+
+            <div class="product-price">
+                65.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Đồ chơi thú cưng', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🦴
+            </div>
+
+            <h3>Xương gặm cho chó</h3>
+
+            <div class="product-price">
+                45.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Xương gặm cho chó', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🎀
+            </div>
+
+            <h3>Nơ & phụ kiện</h3>
+
+            <div class="product-price">
+                35.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Nơ & phụ kiện', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-img">
+                🏠
+            </div>
+
+            <h3>Nhà cho thú cưng</h3>
+
+            <div class="product-price">
+                250.000đ
+            </div>
+
+            <button class="buy" onclick="addCart('Nhà cho thú cưng', event)">
+                🛒 THÊM GIỎ HÀNG
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <h2>💗 VỀ DIAMONDS PET WORLD</h2>
+
+            <p>
+                Diamonds Pet World là nơi chăm sóc và làm đẹp
+                dành riêng cho những người bạn bốn chân.
+            </p>
+
+            <br>
+
+            <p>
+                Chúng tôi cung cấp dịch vụ
+                <b>spa – tắm – cắt tỉa – khách sạn thú cưng</b>
+                cùng nhiều sản phẩm thức ăn, đồ chơi
+                và phụ kiện.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>🐶 TẠI SAO CHỌN CHÚNG TÔI?</h3>
+
+            <p>
+                ✔ Nhân viên thân thiện
+            </p>
+
+            <p>
+                ✔ Không gian sạch sẽ
+            </p>
+
+            <p>
+                ✔ Dụng cụ vệ sinh an toàn
+            </p>
+
+            <p>
+                ✔ Chăm sóc tận tình
+            </p>
+
+            <p>
+                ✔ Giá cả hợp lý
+            </p>
+
+            <p>
+                ✔ Luôn đặt sức khỏe của boss lên hàng đầu
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="section booking" id="booking">
+
+    <h2>📅 ĐẶT LỊCH CHO BOSS</h2>
+
+    <p>
+        Điền thông tin bên dưới để đăng ký dịch vụ
+    </p>
+
+
+    <form class="booking-form" id="bookingForm" onsubmit="bookingSuccess(event)" novalidate>
+
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <!-- THANH TIẾN ĐỘ -->
+        <div class="bk-progress">
+            <div class="bk-dot active" data-step="1"><span>1</span><small>Thông tin</small></div>
+            <div class="bk-line"></div>
+            <div class="bk-dot" data-step="2"><span>2</span><small>Thú cưng & dịch vụ</small></div>
+            <div class="bk-line"></div>
+            <div class="bk-dot" data-step="3"><span>3</span><small>Ngày giờ</small></div>
+        </div>
+
+
+        <div class="bk-pre" id="bkPre"></div>
+
+        <!-- ============ BƯỚC 1: THÔNG TIN CỦA BẠN ============ -->
+        <div class="bk-step active" data-step="1">
+
+            <div class="bk-field">
+                <label for="bkName">Họ và tên <span class="req">*</span></label>
+                <input id="bkName" type="text" name="Tên khách hàng" placeholder="VD: Nguyễn Văn A" autocomplete="name" required>
+            </div>
+
+            <div class="bk-field">
+                <label for="bkPhone">Số điện thoại <span class="req">*</span></label>
+                <input id="bkPhone" type="tel" name="Số điện thoại" placeholder="VD: 0912345678" inputmode="tel" autocomplete="tel" required>
+                <span class="bk-hint">Shop sẽ gọi hoặc nhắn tin để xác nhận lịch hẹn của bạn.</span>
+            </div>
+
+            <div class="bk-field">
+                <label for="bkEmail">Email <span class="bk-opt">(không bắt buộc)</span></label>
+                <input id="bkEmail" type="email" name="email" placeholder="VD: banan@gmail.com" autocomplete="email">
+            </div>
+
+            <div class="bk-field">
+                <span class="bk-label">Cách liên hệ ưa thích</span>
+                <div class="bk-pills">
+                    <label class="bk-pill"><input type="radio" name="Cách liên hệ ưa thích" value="Gọi điện" checked><span>📞 Gọi điện</span></label>
+                    <label class="bk-pill"><input type="radio" name="Cách liên hệ ưa thích" value="Zalo"><span>💬 Zalo</span></label>
+                    <label class="bk-pill"><input type="radio" name="Cách liên hệ ưa thích" value="Nhắn tin SMS"><span>✉️ Nhắn tin</span></label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ============ BƯỚC 2: THÚ CƯNG & DỊCH VỤ ============ -->
+        <div class="bk-step" data-step="2">
+
+            <div class="bk-field">
+                <span class="bk-label">Loại thú cưng <span class="req">*</span></span>
+                <div class="bk-pills">
+                    <label class="bk-pill"><input type="radio" name="Loại thú cưng" value="Chó" required><span>🐶 Chó</span></label>
+                    <label class="bk-pill"><input type="radio" name="Loại thú cưng" value="Mèo"><span>🐱 Mèo</span></label>
+                    <label class="bk-pill"><input type="radio" name="Loại thú cưng" value="Khác"><span>🐾 Khác</span></label>
+                </div>
+            </div>
+
+            <div class="bk-row">
+                <div class="bk-field">
+                    <label for="bkPet">Tên thú cưng <span class="req">*</span></label>
+                    <input id="bkPet" type="text" name="Tên thú cưng" placeholder="VD: Lốp" required>
+                </div>
+                <div class="bk-field">
+                    <label for="bkBreed">Giống</label>
+                    <input id="bkBreed" type="text" name="Giống" placeholder="VD: Poodle, Corgi, mèo Anh lông ngắn">
+                </div>
+            </div>
+
+            <div class="bk-row">
+                <div class="bk-field">
+                    <label for="bkWeight">Cân nặng <span class="req">*</span></label>
+                    <select id="bkWeight" name="Cân nặng" required>
+                        <option value="">-- Chọn cân nặng --</option>
+                        <option>Dưới 3kg</option>
+                        <option>3 - 5kg</option>
+                        <option>5 - 10kg</option>
+                        <option>10 - 20kg</option>
+                        <option>Trên 20kg</option>
+                        <option>Chưa rõ</option>
+                    </select>
+                </div>
+                <div class="bk-field">
+                    <label for="bkAge">Tuổi</label>
+                    <input id="bkAge" type="text" name="Tuổi" placeholder="VD: 2 tuổi, 6 tháng">
+                </div>
+            </div>
+
+            <div class="bk-row">
+                <div class="bk-field">
+                    <label for="bkGender">Giới tính</label>
+                    <select id="bkGender" name="Giới tính">
+                        <option value="">-- Chọn --</option>
+                        <option>Đực</option>
+                        <option>Cái</option>
+                    </select>
+                </div>
+                <div class="bk-field">
+                    <label for="bkQty">Số lượng thú cưng</label>
+                    <input id="bkQty" type="number" name="Số lượng thú cưng" min="1" max="10" value="1">
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <span class="bk-label">Lưu ý về sức khỏe & tính cách</span>
+                <div class="bk-pills">
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Đã tiêm phòng đầy đủ"><span>💉 Đã tiêm phòng</span></label>
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Chưa tiêm phòng"><span>Chưa tiêm phòng</span></label>
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Hay cắn / dữ"><span>⚠️ Hay cắn / dữ</span></label>
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Sợ máy sấy / tiếng ồn"><span>🔊 Sợ máy sấy</span></label>
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Dị ứng"><span>Dị ứng</span></label>
+                    <label class="bk-pill"><input type="checkbox" name="Lưu ý về thú cưng" value="Bệnh về da"><span>Bệnh về da</span></label>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <span class="bk-label">Dịch vụ cần làm <span class="req">*</span> <span class="bk-opt">(chọn được nhiều)</span></span>
+                <div class="bk-services">
+                    <label class="bk-service">
+                        <input type="checkbox" name="Dịch vụ" value="Cắt tỉa & tạo kiểu">
+                        <span class="bk-card"><strong>✂️ Cắt tỉa & tạo kiểu</strong><em></em></span>
+                    </label>
+                    <label class="bk-service">
+                        <input type="checkbox" name="Dịch vụ" value="Tắm & Spa">
+                        <span class="bk-card"><strong>🛁 Tắm & Spa</strong><em></em></span>
+                    </label>
+                    <label class="bk-service">
+                        <input type="checkbox" name="Dịch vụ" value="Làm đẹp">
+                        <span class="bk-card"><strong>💅 Làm đẹp</strong><em></em></span>
+                    </label>
+                    <label class="bk-service">
+                        <input type="checkbox" name="Dịch vụ" value="Khách sạn thú cưng">
+                        <span class="bk-card"><strong>🏨 Khách sạn thú cưng</strong><em></em></span>
+                    </label>
+                </div>
+                <div class="bk-error" id="bkServiceErr">Vui lòng chọn ít nhất một dịch vụ.</div>
+                <div class="bk-estimate" id="bkEstimate"></div>
+            </div>
+
+        </div>
+
+
+        <!-- ============ BƯỚC 3: NGÀY GIỜ & XÁC NHẬN ============ -->
+        <div class="bk-step" data-step="3">
+
+            <div class="bk-row">
+                <div class="bk-field">
+                    <label for="bkDate">Ngày hẹn <span class="req">*</span></label>
+                    <input id="bkDate" type="date" name="Ngày hẹn" required>
+                </div>
+                <div class="bk-field">
+                    <label for="bkTime">Khung giờ <span class="req">*</span></label>
+                    <select id="bkTime" name="Khung giờ" required></select>
+                    <span class="bk-hint">Shop mở cửa 08:00 - 18:00 mỗi ngày.</span>
+                </div>
+            </div>
+
+            <div class="bk-hotel" id="bkHotel">
+                <div class="bk-field">
+                    <label for="bkDateOut">🏨 Ngày trả thú cưng (khách sạn) <span class="req">*</span></label>
+                    <input id="bkDateOut" type="date" name="Ngày trả">
+                    <span class="bk-hint" id="bkNights"></span>
+                </div>
+            </div>
+
+            <div class="bk-field">
+                <label for="bkNote">Ghi chú thêm cho shop</label>
+                <textarea id="bkNote" name="Ghi chú" placeholder="VD: bé hơi nhát, muốn cắt tỉa gọn gàng..."></textarea>
+            </div>
+
+            <div class="bk-field">
+                <span class="bk-label">Kiểm tra lại thông tin</span>
+                <div class="bk-summary" id="bkSummary"></div>
+            </div>
+
+            <label class="bk-agree">
+                <input type="checkbox" required>
+                <span>Tôi xác nhận thông tin trên là chính xác và đồng ý để Diamonds Pet World liên hệ xác nhận lịch hẹn.</span>
+            </label>
+
+            <div class="bk-secure">🔒 Thông tin của bạn chỉ được dùng để xác nhận lịch hẹn.</div>
+
+        </div>
+
+
+        <div class="bk-error" id="bkSubmitErr">😿 Gửi không thành công. Vui lòng thử lại hoặc gọi trực tiếp cho shop: 0347 654 648.</div>
+
+        <div class="bk-nav">
+            <button type="button" id="bkBack" class="bk-secondary" hidden>← QUAY LẠI</button>
+            <button type="button" id="bkNext">TIẾP TỤC →</button>
+            <button type="submit" id="bkSubmit" hidden>🐾 XÁC NHẬN ĐẶT LỊCH</button>
+        </div>
+
+    </form>
+
+
+    <!-- MÀN HÌNH XÁC NHẬN SAU KHI ĐẶT LỊCH -->
+    <div class="bk-done" id="bookingDone" hidden>
+
+        <div class="bk-check">✓</div>
+
+        <h3>Cảm ơn bạn! Bé <span id="bkDonePet"></span> đã được đặt lịch 🎉</h3>
+
+        <div class="bk-code">Mã lịch hẹn: <strong id="bkDoneCode"></strong></div>
+
+        <div class="bk-summary" id="bkDoneSummary"></div>
+
+        <div class="bk-done-note">
+            Shop sẽ liên hệ xác nhận qua số <strong id="bkDonePhone"></strong>. Bạn nhớ giữ lại mã lịch hẹn nhé.
+        </div>
+
+        <div class="bk-done-actions">
+            <a id="bkCalLink" class="bk-link" href="#" target="_blank" rel="noopener">📅 Thêm vào Google Calendar</a>
+            <button type="button" onclick="bkReset()">➕ ĐẶT LỊCH THÊM</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>📞 LIÊN HỆ</h2>
+
+        <p>
+            Ghé shop hoặc liên hệ với chúng tôi
+        </p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+
+        <div class="contact-item">
+
+            <strong>📍 ĐỊA CHỈ</strong>
+
+            42 Lê Hồng Phong<br>
+            Hội An Tây, Đà Nẵng
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <strong>📞 ĐIỆN THOẠI</strong>
+
+            <a href="tel:0347654648" style="color:inherit;font-weight:bold">0347 654 648</a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <strong>⏰ GIỜ MỞ CỬA</strong>
+
+            08:00 - 18:00<br>
+            Tất cả các ngày
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <strong>🐾 DỊCH VỤ</strong>
+
+            Spa • Cắt tỉa<br>
+            Hotel • Pet Shop
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer> <div>
+
+<h3>📍 Địa chỉ</h3>
+
+<p>
+42 Lê Hồng Phong, Hội An Tây, Đà Nẵng
+</p>
+
+<div style="
+    margin-top:15px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.25);
+">
+
+<iframe
+    src="https://www.google.com/maps?q=42+Lê+Hồng+Phong,+Hội+An+Tây,+Đà+Nẵng&output=embed"
+    width="100%"
+    height="250"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+
+<a
+    href="https://www.google.com/maps/search/?api=1&query=42+Lê+Hồng+Phong,+Hội+An+Tây,+Đà+Nẵng"
+    target="_blank"
+    class="btn btn-yellow"
+    style="
+        display:inline-block;
+        margin-top:15px;
+    ">
+    📍 XEM CHỈ ĐƯỜNG
+</a>
+
+</div>
+
+    <p>
+        © 2026 <strong>DIAMONDS PET WORLD</strong>
+    </p>
+
+    <p>
+        Thế giới thú cưng - Yêu thương từ những điều nhỏ nhất 🐾
+    </p>
+
+</footer>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart" onclick="showCart()">
+
+    🛒 GIỎ HÀNG:
+    <span id="cartCount">0</span>
+
+</div>
+
+
+
+<script>
+let cartCount = 0;
+let cartItems = [];
+
+/* =========================
+   HIỆU ỨNG THÚ CƯNG
+========================= */
+function createPetEffect(x, y, pet = null) {
+    const effect = document.createElement("div");
+    effect.className = "pet-effect";
+
+    const pets = ["🐶", "🐱", "🐰", "🐾", "🦴"];
+    effect.textContent = pet || pets[Math.floor(Math.random() * pets.length)];
+
+    effect.style.left = x + "px";
+    effect.style.top = y + "px";
+    effect.style.setProperty("--x", (Math.random() * 260 - 130) + "px");
+    effect.style.setProperty("--y", (Math.random() * -220 - 50) + "px");
+    effect.style.setProperty("--rotate", (Math.random() * 360 - 180) + "deg");
+
+    document.body.appendChild(effect);
+
+    setTimeout(() => effect.remove(), 1500);
+}
+
+/* =========================
+   HIỆU ỨNG DẤU CHÂN
+========================= */
+function createPawEffect(x, y) {
+    const paw = document.createElement("div");
+    paw.className = "paw-effect";
+    paw.textContent = "🐾";
+    paw.style.left = x + "px";
+    paw.style.top = y + "px";
+
+    document.body.appendChild(paw);
+
+    setTimeout(() => paw.remove(), 1000);
+}
+
+/* =========================
+   RIPPLE CHO NÚT
+========================= */
+function createRipple(element, event) {
+    const ripple = document.createElement("span");
+    ripple.className = "ripple";
+
+    const rect = element.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+
+    ripple.style.width = size + "px";
+    ripple.style.height = size + "px";
+    ripple.style.left = (event.clientX - rect.left - size / 2) + "px";
+    ripple.style.top = (event.clientY - rect.top - size / 2) + "px";
+
+    element.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 650);
+}
+
+/* =========================
+   CLICK LOGO
+========================= */
+const logo = document.querySelector(".logo");
+
+if (logo) {
+    logo.addEventListener("click", function(event) {
+        this.classList.remove("logo-click");
+        void this.offsetWidth;
+        this.classList.add("logo-click");
+
+        const pets = ["🐶", "🐱", "🐰", "🐾", "🦴", "🐕"];
+
+        pets.forEach((pet, index) => {
+            setTimeout(() => {
+                createPetEffect(event.clientX, event.clientY, pet);
+            }, index * 90);
+        });
+    });
+}
+
+/* =========================
+   CLICK MENU
+========================= */
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        createRipple(this, event);
+
+        this.classList.remove("menu-click");
+        void this.offsetWidth;
+        this.classList.add("menu-click");
+
+        createPawEffect(event.clientX, event.clientY);
+    });
+});
+
+/* =========================
+   HIỆU ỨNG CHO CÁC NÚT
+========================= */
+document.querySelectorAll(".btn, .buy, .booking-form button").forEach(button => {
+    button.addEventListener("click", function(event) {
+        createRipple(this, event);
+    });
+});
+
+/* =========================
+   THÊM GIỎ HÀNG
+========================= */
+/* =========================
+   CỬA HÀNG: GIỎ HÀNG & THANH TOÁN
+========================= */
+
+/* ====== CẤU HÌNH CỦA SHOP ====== */
+const SHOP = {
+    phone: "0347654648",
+    zalo: "0347654648",
+    shipFee: 15000,
+    freeShipFrom: 0,
+    bank: { bankId: "VPB", account: "AGBVMSP518960883209", accountName: "Diamonds Pet World" }
+};
+
+const VOUCHERS = {};
+
+const PRODUCT_IMAGES = {};
+
+const PRODUCT_DETAILS = {
+  "Thức ăn cho chó": {emoji:"🥩", price:120000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Thông tin lợi ích và đối tượng sử dụng sẽ được cập nhật theo bao bì thật.","Chọn khẩu phần theo hướng dẫn của nhà sản xuất.","Luôn chuẩn bị nước sạch cho thú cưng."],usage:"Làm theo hướng dẫn trên bao bì sản phẩm thực tế.",storage:"Bảo quản theo hướng dẫn trên bao bì."},
+  "Thức ăn cho mèo": {emoji:"🐟", price:135000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Thông tin lợi ích và đối tượng sử dụng sẽ được cập nhật theo bao bì thật.","Chuyển đổi thức ăn từ từ theo khả năng thích nghi của mèo.","Luôn chuẩn bị nước sạch cho thú cưng."],usage:"Làm theo hướng dẫn trên bao bì sản phẩm thực tế.",storage:"Bảo quản theo hướng dẫn trên bao bì."},
+  "Đồ chơi thú cưng": {emoji:"🧸", price:65000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"Không áp dụng",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Chọn loại đồ chơi theo kích thước và thói quen của thú cưng.","Kiểm tra đồ chơi thường xuyên để phát hiện hư hỏng.","Giám sát thú cưng khi chơi nếu có chi tiết nhỏ."],usage:"Sử dụng dưới sự quan sát của chủ nuôi; thay mới nếu đồ chơi hư hỏng.",storage:"Làm sạch và để khô theo chất liệu thực tế."},
+  "Xương gặm cho chó": {emoji:"🦴", price:45000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Thông tin chất liệu và công dụng cần được xác nhận theo sản phẩm thật.","Chọn kích thước phù hợp với chó.","Luôn quan sát khi chó gặm và thay bỏ nếu sản phẩm nứt vỡ."],usage:"Cho gặm dưới sự giám sát; không dùng nếu sản phẩm bị nứt, vỡ hoặc quá nhỏ so với chó.",storage:"Bảo quản theo nhãn sản phẩm."},
+  "Nơ & phụ kiện": {emoji:"🎀", price:35000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"Không áp dụng",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Chọn phụ kiện đúng kích thước của thú cưng.","Điều chỉnh vừa vặn, không siết chặt.","Tháo phụ kiện khi thú cưng có dấu hiệu khó chịu."],usage:"Điều chỉnh vừa vặn và kiểm tra thường xuyên khi đeo.",storage:"Để nơi khô ráo, vệ sinh theo chất liệu."},
+  "Nhà cho thú cưng": {emoji:"🏠", price:250000, image:"", sku:"",brand:"",origin:"",material:"",expiry:"Không áp dụng",stock:"Chưa cập nhật",badge:"",oldPrice:null,variants:[],gallery:[],desc:["Đo kích thước thú cưng và kiểm tra kích thước thực tế của nhà.","Chọn vị trí đặt khô ráo, thông thoáng.","Kiểm tra định kỳ độ chắc chắn và vệ sinh."],usage:"Đối chiếu kích thước sản phẩm trước khi đặt mua.",storage:"Vệ sinh theo chất liệu; đặt ở nơi phù hợp với hướng dẫn sản phẩm."}
+};
+
+const PRODUCT_SLUGS = {};
+const productSlug = name => ({"Thức ăn cho chó":"thuc-an-cho-cho","Thức ăn cho mèo":"thuc-an-cho-meo","Đồ chơi thú cưng":"do-choi-thu-cung","Xương gặm cho chó":"xuong-gam-cho-cho","Nơ & phụ kiện":"no-phu-kien","Nhà cho thú cưng":"nha-cho-thu-cung"}[name] || name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/đ/g,"d").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""));
+const detailNameFromHash = () => { const m = location.hash.match(/^#san-pham\/([^?]+)/); if (!m) return null; return Object.keys(CATALOG).find(n => productSlug(n) === decodeURIComponent(m[1])) || null; };
+
+const $ = id => document.getElementById(id);
+const money = n => Number(n || 0).toLocaleString("vi-VN") + "đ";
+const esc = s => String(s ?? "").replace(/[&<>"\']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;", "\'": "&#39;" }[c]));
+
+const productGrid = document.querySelector(".product-grid");
+if (productGrid) productGrid.innerHTML = Object.entries(PRODUCT_DETAILS).map(([name,d]) => {
+    const badge = d.badge ? '<span class="pd-card-badge">' + esc(d.badge) + '</span>' : '';
+    const old = d.oldPrice && d.oldPrice > d.price ? '<span class="product-old-price">' + money(d.oldPrice) + '</span>' : '';
+    const discount = d.oldPrice && d.oldPrice > d.price ? '<span class="pd-card-discount">-' + Math.round((d.oldPrice-d.price)/d.oldPrice*100) + '%</span>' : '';
+    const visual = d.image ? '<img src="' + esc(d.image) + '" alt="' + esc(name) + '" loading="lazy">' : esc(d.emoji || '🐾');
+    return '<div class="product">' + badge + '<div class="product-img">' + visual + '</div><h3>' + esc(name) + '</h3><div class="product-price">' + money(d.price) + '</div>' + old + discount + '<button class="buy" type="button">🛒 THÊM GIỎ HÀNG</button></div>';
+}).join("");
+const CATALOG = {};
+document.querySelectorAll(".product").forEach(el => {
+    const name = el.querySelector("h3").textContent.trim();
+    const detailData = PRODUCT_DETAILS[name] || {};
+    const price = Number(detailData.price ?? (parseInt(el.querySelector(".product-price").textContent.replace(/\D/g, ""), 10) || 0));
+    el.querySelector(".product-price").textContent = money(price);
+    const imgBox = el.querySelector(".product-img");
+    const emoji = detailData.emoji || imgBox.textContent.trim();
+    const img = detailData.image || PRODUCT_IMAGES[name] || "";
+    CATALOG[name] = { name, price, emoji, img };
+    if (img) { imgBox.textContent = ""; const im = document.createElement("img"); im.src = img; im.alt = name; im.loading = "lazy"; im.style.cssText = "width:100%;height:100%;object-fit:cover"; imgBox.appendChild(im); }
+    const hint = document.createElement("p"); hint.className = "product-hint"; hint.textContent = "Xem thông tin chi tiết →"; el.querySelector(".product-price").after(hint);
+    const buy = el.querySelector(".buy"); buy.addEventListener("click", e => { e.stopPropagation(); addCart(name, e); }); const now = document.createElement("button"); now.className = "buy buy-now"; now.textContent = "⚡ MUA NGAY"; now.addEventListener("click", e => { e.stopPropagation(); buyNow(name); }); buy.after(now);
+});
+
+const PRODUCT_CATEGORIES = {
+    "Thức ăn cho chó": "Thức ăn",
+    "Thức ăn cho mèo": "Thức ăn",
+    "Đồ chơi thú cưng": "Đồ chơi",
+    "Xương gặm cho chó": "Đồ chơi",
+    "Nơ & phụ kiện": "Phụ kiện",
+    "Nhà cho thú cưng": "Phụ kiện"
+};
+
+(function () {
+    const CATS = [["Thức ăn", "🍖"], ["Đồ chơi", "🧸"], ["Phụ kiện", "🎀"], ["Thuốc", "💊"]];
+    const input = $("shopSearch"), list = $("shopSuggest"), tabsBox = $("shopTabs");
+    const countEl = $("shopCount"), emptyEl = $("shopEmpty"), clearBtn = $("shopClear"), xBtn = $("shopSearchX");
+    if (!input) return;
+
+    let cat = "Tất cả", query = "", active = -1;
+
+    const fold = s => Array.from(String(s || "")).map(c => {
+        const f = c.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[đĐ]/g, "d").toLowerCase();
+        return Array.from(f)[0] || c;
+    }).join("");
+    const tokensOf = s => fold(s).split(/\s+/).filter(Boolean);
+
+    const cards = {};
+    document.querySelectorAll(".product").forEach(el => { cards[el.querySelector("h3").textContent.trim()] = el; });
+
+    const items = Object.keys(CATALOG).map(name => {
+        const p = CATALOG[name], d = (typeof PRODUCT_DETAILS !== "undefined" && PRODUCT_DETAILS[name]) || {};
+        const c = PRODUCT_CATEGORIES[name] || "Khác";
+        return { name, cat: c, price: p.price, emoji: p.emoji, img: p.img, el: cards[name],
+                 nameF: fold(name), key: fold(name + " " + c + " " + (d.brand || "")), badge: d.badge };
+    });
+
+    const matches = (it, tokens) => tokens.every(t => it.key.includes(t));
+
+    function highlight(it, tokens) {
+        const chars = Array.from(it.name), f = it.nameF, on = new Array(chars.length).fill(false);
+        tokens.forEach(t => {
+            let i = f.indexOf(t);
+            while (i > -1) { for (let k = i; k < i + t.length; k++) on[k] = true; i = f.indexOf(t, i + t.length); }
+        });
+        let out = "", open = false;
+        chars.forEach((c, i) => {
+            if (on[i] && !open) { out += "<mark>"; open = true; }
+            if (!on[i] && open) { out += "</mark>"; open = false; }
+            out += esc(c);
+        });
+        return out + (open ? "</mark>" : "");
+    }
+
+    function apply() {
+        const tokens = tokensOf(query);
+        let shown = 0;
+        items.forEach(it => {
+            const ok = (cat === "Tất cả" || it.cat === cat) && matches(it, tokens);
+            if (it.el) it.el.hidden = !ok;
+            if (ok) shown++;
+        });
+
+        renderTabs(tokens);
+
+        countEl.textContent = shown
+            ? "Hiển thị " + shown + " sản phẩm" + (query ? " cho “" + query + "”" : "") + (cat !== "Tất cả" ? " trong nhóm " + cat : "")
+            : "";
+        clearBtn.hidden = !(query || cat !== "Tất cả");
+        xBtn.hidden = !input.value;
+
+        emptyEl.textContent = "";
+        emptyEl.hidden = shown > 0;
+        if (!shown) {
+            const ico = document.createElement("div"); ico.className = "se-ico"; ico.textContent = query ? "🔍" : "📦";
+            const txt = document.createElement("div"); txt.className = "se-text";
+            txt.textContent = query
+                ? "Không tìm thấy sản phẩm nào cho “" + query + "”" + (cat !== "Tất cả" ? " trong nhóm " + cat : "") + ". Bạn thử từ khóa khác nhé."
+                : "Nhóm “" + cat + "” hiện chưa có sản phẩm. Bạn nhắn shop để được tư vấn nhé.";
+            const acts = document.createElement("div"); acts.className = "se-acts";
+            if (typeof SHOP !== "undefined" && SHOP.zalo) {
+                const a = document.createElement("a"); a.href = "https://zalo.me/" + SHOP.zalo; a.target = "_blank"; a.rel = "noopener"; a.textContent = "💬 Hỏi shop qua Zalo";
+                acts.appendChild(a);
+            }
+            const b = document.createElement("button"); b.type = "button"; b.textContent = "Xem tất cả sản phẩm";
+            b.addEventListener("click", reset); acts.appendChild(b);
+            emptyEl.append(ico, txt, acts);
+        }
+    }
+
+    function renderTabs(tokens) {
+        const n = c => items.filter(it => (c === "Tất cả" || it.cat === c) && matches(it, tokens)).length;
+        const all = [["Tất cả", "🐾"]].concat(CATS);
+        tabsBox.innerHTML = all.map(([name, ico]) =>
+            '<button type="button" class="shop-tab" role="tab" data-cat="' + esc(name) + '" aria-selected="' + (cat === name) + '">' +
+            ico + " " + esc(name) + " <small>(" + n(name) + ")</small></button>").join("");
+    }
+
+    function reset() {
+        cat = "Tất cả"; query = ""; input.value = "";
+        apply(); closeList();
+    }
+
+    tabsBox.addEventListener("click", e => {
+        const b = e.target.closest(".shop-tab");
+        if (!b) return;
+        cat = b.dataset.cat;
+        apply();
+    });
+    clearBtn.addEventListener("click", reset);
+
+    function closeList() {
+        list.hidden = true; active = -1;
+        input.setAttribute("aria-expanded", "false");
+        input.removeAttribute("aria-activedescendant");
+    }
+
+    function openList() { list.hidden = false; input.setAttribute("aria-expanded", "true"); }
+
+    function row(it, tokens, idx) {
+        const thumb = it.img ? '<img src="' + esc(it.img) + '" alt="">' : esc(it.emoji || "🐾");
+        return '<div class="ss-opt" role="option" id="ss-' + idx + '" data-name="' + esc(it.name) + '">' +
+            '<div class="ss-thumb">' + thumb + '</div>' +
+            '<div class="ss-main"><div class="ss-name">' + highlight(it, tokens) + '</div><div class="ss-cat">' + esc(it.cat) + '</div></div>' +
+            '<div class="ss-price">' + money(it.price) + '</div></div>';
+    }
+
+    function suggest() {
+        const tokens = tokensOf(input.value);
+        xBtn.hidden = !input.value;
+        let html = "", idx = 0;
+
+        if (!tokens.length) {
+            const pick = items.filter(i => i.badge).concat(items).filter((v, i, a) => a.indexOf(v) === i).slice(0, 5);
+            html += '<div class="ss-title">Gợi ý cho bạn</div>' + pick.map(it => row(it, [], idx++)).join("");
+            html += '<div class="ss-title">Tìm theo danh mục</div><div class="ss-chips">' +
+                CATS.map(([n, ico]) => '<button type="button" class="ss-chip" data-cat="' + esc(n) + '">' + ico + " " + esc(n) + "</button>").join("") + "</div>";
+        } else {
+            const q0 = fold(input.value.trim());
+            const res = items.filter(it => matches(it, tokens))
+                .sort((a, b) => (a.nameF.startsWith(q0) ? 0 : a.nameF.includes(q0) ? 1 : 2) - (b.nameF.startsWith(q0) ? 0 : b.nameF.includes(q0) ? 1 : 2));
+            if (res.length) {
+                html += '<div class="ss-title">Kết quả gợi ý</div>' + res.slice(0, 6).map(it => row(it, tokens, idx++)).join("");
+                html += '<div class="ss-all ss-opt-all" role="option" id="ss-' + idx++ + '" data-all="1">🔍 Xem tất cả ' + res.length + ' kết quả cho “' + esc(input.value.trim()) + '”</div>';
+            } else {
+                html += '<div class="ss-none">Không tìm thấy “' + esc(input.value.trim()) + '”. Thử tìm theo danh mục:</div><div class="ss-chips">' +
+                    CATS.map(([n, ico]) => '<button type="button" class="ss-chip" data-cat="' + esc(n) + '">' + ico + " " + esc(n) + "</button>").join("") + "</div>";
+            }
+        }
+        list.innerHTML = html;
+        active = -1;
+        openList();
+    }
+
+    const opts = () => Array.from(list.querySelectorAll("[role=option]"));
+
+    function setActive(i) {
+        const o = opts();
+        if (!o.length) return;
+        active = (i + o.length) % o.length;
+        o.forEach((el, k) => el.classList.toggle("on", k === active));
+        input.setAttribute("aria-activedescendant", o[active].id);
+        o[active].scrollIntoView({ block: "nearest" });
+    }
+
+    function submit() {
+        query = input.value.trim();
+        cat = "Tất cả";
+        apply(); closeList();
+        $("shopTools").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function choose(el) {
+        if (el.dataset.all) return submit();
+        const name = el.dataset.name;
+        closeList();
+        if (name && typeof openProductDetail === "function") openProductDetail(name);
+    }
+
+    function reveal() {
+        const bar = document.querySelector(".shop-search");
+        let top = 0;
+        document.querySelectorAll("header, nav").forEach(e => {
+            const pos = getComputedStyle(e).position;
+            if (pos === "sticky" || pos === "fixed") top = Math.max(top, e.getBoundingClientRect().bottom);
+        });
+        const r = bar.getBoundingClientRect();
+        const dy = r.top - top - 14;
+        if (Math.abs(dy) > 4) window.scrollBy({ top: dy, behavior: "smooth" });
+        list.style.maxHeight = Math.max(220, window.innerHeight - top - r.height - 50) + "px";
+    }
+
+    input.addEventListener("input", suggest);
+    input.addEventListener("focus", () => { suggest(); reveal(); });
+    input.addEventListener("keydown", e => {
+        if (e.key === "ArrowDown") { e.preventDefault(); if (list.hidden) suggest(); setActive(active + 1); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); setActive(active - 1); }
+        else if (e.key === "Escape") { closeList(); }
+        else if (e.key === "Enter") {
+            e.preventDefault();
+            const o = opts();
+            if (!list.hidden && active > -1 && o[active]) choose(o[active]); else submit();
+        }
+    });
+
+    list.addEventListener("click", e => {
+        const chip = e.target.closest(".ss-chip");
+        if (chip) { cat = chip.dataset.cat; query = ""; input.value = ""; apply(); closeList(); $("shopTools").scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+        const o = e.target.closest("[role=option]");
+        if (o) choose(o);
+    });
+
+    $("shopSearchBtn").addEventListener("click", submit);
+    xBtn.addEventListener("click", () => { input.value = ""; if (query) { query = ""; apply(); } suggest(); input.focus(); });
+    document.addEventListener("click", e => { if (!e.target.closest(".shop-search")) closeList(); });
+
+    apply();
+})();
+
+const productListJsonLd = document.createElement("script");
+productListJsonLd.type = "application/ld+json";
+productListJsonLd.id = "pdProductListJsonLd";
+productListJsonLd.textContent = JSON.stringify({
+  "@context":"https://schema.org", "@type":"ItemList", "itemListElement":Object.values(CATALOG).map((item,index)=>{
+    const d=PRODUCT_DETAILS[item.name]||{}, status=d.stock;
+    const offer={"@type":"Offer",price:item.price,priceCurrency:"VND",url:location.href.split("#")[0]+"#san-pham/"+productSlug(item.name)};
+    if(status==="Còn hàng")offer.availability="https://schema.org/InStock";
+    else if(status==="Sắp hết")offer.availability="https://schema.org/LimitedAvailability";
+    else if(status==="Hết hàng")offer.availability="https://schema.org/OutOfStock";
+    return {"@type":"ListItem",position:index+1,item:{"@type":"Product",name:item.name,description:(d.desc||[]).join(" "),image:item.img||undefined,sku:d.sku||undefined,brand:d.brand?{"@type":"Brand",name:d.brand}:undefined,offers:offer}};
+  })
+});
+document.head.appendChild(productListJsonLd);
+
+const productModalHTML = `
+<div class="product-detail-modal" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="pdName">
+ <div class="pd-box" id="pdBox"><button class="pd-close" id="pdClose" aria-label="Đóng chi tiết">×</button>
+  <section class="pd-gallery"><div class="pd-main-image" id="pdMainImage"><div class="pd-skeleton" id="pdSkeleton"></div><span class="pd-emoji" id="pdEmoji">🐾</span></div><div class="pd-thumbs" id="pdThumbs"></div><p class="pd-gallery-note" id="pdGalleryNote">Ảnh minh họa; ảnh thật sẽ được cập nhật khi shop cung cấp.</p></section>
+  <section class="pd-info"><span class="pd-tag" id="pdTag">SẢN PHẨM THÚ CƯNG</span><h2 id="pdName">Tên sản phẩm</h2><div class="pd-meta" id="pdMeta"></div><div class="pd-price-line"><strong class="pd-price" id="pdPrice">0đ</strong><span class="pd-old-price" id="pdOldPrice" hidden></span><span class="pd-discount" id="pdDiscount" hidden></span></div><div class="pd-stock in" id="pdStock">● Còn hàng</div>
+   <div id="pdVariantWrap" hidden><div class="pd-select-label" id="pdVariantLabel">Phân loại</div><div class="pd-variants" id="pdVariants"></div></div>
+   <div class="pd-qtyrow"><b>Số lượng</b><button type="button" id="pdMinus" aria-label="Giảm số lượng">−</button><input id="pdQty" type="number" min="1" max="99" value="1" aria-label="Số lượng sản phẩm"><button type="button" id="pdPlus" aria-label="Tăng số lượng">+</button></div>
+   <div class="pd-actions"><button class="pd-add" id="pdAdd">🛒 THÊM GIỎ HÀNG</button><button class="pd-buy" id="pdBuy">⚡ MUA NGAY</button></div><div class="pd-added" id="pdAdded">✓ Đã thêm vào giỏ hàng <button id="pdViewCart">Xem giỏ</button></div>
+   <div class="pd-secondary-actions"><a id="pdZalo" href="#" target="_blank" rel="noopener">💬 Hỏi shop qua Zalo</a><button type="button" id="pdShare">↗ Chia sẻ sản phẩm</button></div>
+   <div class="pd-perks"><div>🚚 <b>Giao hàng</b><span id="pdShipping">Freeship bán kính 3km</span></div><div>🏪 <b>Nhận tại cửa hàng</b><span>42 Lê Hồng Phong, Hội An Tây, Đà Nẵng</span></div><div>💵 <b>Thanh toán</b><span>Hỗ trợ quét mã QR chuyển khoản</span></div><div>🔄 <b>Đổi trả</b><span>Vui lòng hỏi shop về chính sách hiện hành</span></div></div>
+  </section>
+  <section class="pd-content"><div class="pd-tabs" role="tablist"><button class="pd-tab active" data-tab="desc">Mô tả</button><button class="pd-tab" data-tab="spec">Thông số</button><button class="pd-tab" data-tab="usage">Hướng dẫn sử dụng</button><button class="pd-tab" data-tab="reviews">Đánh giá</button><button class="pd-tab" data-tab="faq">Hỏi đáp</button></div><div class="pd-tab-panel" id="pdTabPanel"></div></section>
+  <section class="pd-related"><div class="pd-related-box"><h4>🧺 Thường mua cùng</h4><div class="pd-related-items" id="pdTogether"></div></div><div class="pd-related-box"><h4>✨ Sản phẩm tương tự</h4><div class="pd-related-items" id="pdSimilar"></div></div></section>
+ </div>
+ <div class="pd-sticky"><div class="pd-sticky-price" id="pdStickyPrice">0đ</div><button class="pd-add" id="pdStickyAdd">🛒 Thêm giỏ</button><button class="pd-buy" id="pdStickyBuy">Mua ngay</button></div>
+</div><div class="pd-zoom" id="pdZoom" aria-label="Ảnh phóng to"><img id="pdZoomImg" alt="Ảnh sản phẩm phóng to"></div>`;
+document.body.insertAdjacentHTML("beforeend", productModalHTML);
+let currentDetailProduct = null, currentGalleryIndex = 0, selectedVariantIndex = -1, selectedVariantImage = null, activeDetailTab = "desc", pdLastFocus = null;
+function currentDetail(){ return PRODUCT_DETAILS[currentDetailProduct] || {}; }
+function currentVariant(){ const d=currentDetail(); return selectedVariantIndex >= 0 ? d.variants?.[selectedVariantIndex] : null; }
+function currentPrice(){ const v=currentVariant(); return Number(v?.price ?? CATALOG[currentDetailProduct]?.price ?? 0); }
+function currentStatus(){ return String(currentDetail().stock || "Còn hàng"); }
+function renderPdImage(index){
+ const item=CATALOG[currentDetailProduct], d=currentDetail(), all=[selectedVariantImage || item?.img || "", ...(d.gallery || [])].filter(Boolean); currentGalleryIndex=Math.max(0,Math.min(index,Math.max(0,all.length-1)));
+ const main=$("pdMainImage"), emoji=$("pdEmoji"), skeleton=$("pdSkeleton"); main.querySelector("img")?.remove(); skeleton.style.display="none";
+ if(all.length){ skeleton.style.display="block"; emoji.style.display="none"; const im=document.createElement("img"); im.src=all[currentGalleryIndex]; im.alt=item.name+" - ảnh "+(currentGalleryIndex+1); im.onload=()=>skeleton.style.display="none"; im.onerror=()=>{skeleton.style.display="none";im.remove();emoji.style.display="";}; main.appendChild(im); }
+ else { emoji.textContent=item?.emoji || "🐾"; emoji.style.display=""; }
+ document.querySelectorAll(".pd-thumb").forEach((el,i)=>el.classList.toggle("active",i===currentGalleryIndex));
+ $("pdGalleryNote").textContent=(d.gallery?.length ? "Bấm ảnh lớn để phóng to · Có thể vuốt ngang để xem ảnh" : "Chưa có bộ ảnh thật đầy đủ. Ảnh hiện tại là ảnh/biểu tượng đang có trên website.");
+}
+function renderPdGallery(){
+ const item=CATALOG[currentDetailProduct], d=currentDetail(), all=[selectedVariantImage || item?.img || "", ...(d.gallery || [])].filter(Boolean); const thumbs=$("pdThumbs"); thumbs.innerHTML="";
+ const count=Math.max(4,all.length);
+ for(let i=0;i<count;i++){
+   const b=document.createElement(all[i] ? "button" : "div"); b.className="pd-thumb"+(i===0?" active":"");
+   if(all[i]){b.type="button";b.setAttribute("aria-label","Xem ảnh "+(i+1));const im=document.createElement("img");im.src=all[i];im.alt="";b.appendChild(im);b.addEventListener("click",()=>renderPdImage(i));}
+   else {b.textContent="Ảnh bổ sung\nchưa cập nhật";}
+   thumbs.appendChild(b);
+ }
+ renderPdImage(0);
+}
+function renderPdPrice(){const price=currentPrice(),d=currentDetail(),old=d.oldPrice;$("pdPrice").textContent=money(price);$("pdStickyPrice").textContent=money(price);$("pdOldPrice").hidden=!(old && old>price);$("pdOldPrice").textContent=old?money(old):"";$("pdDiscount").hidden=!(old && old>price);$("pdDiscount").textContent=old&&old>price?"-"+Math.round((old-price)/old*100)+"%":"";}
+function renderPdVariants(){const d=currentDetail(),wrap=$("pdVariantWrap"),box=$("pdVariants");box.innerHTML="";wrap.hidden=!(d.variants&&d.variants.length);if(wrap.hidden)return;if(selectedVariantIndex<0)selectedVariantIndex=0;d.variants.forEach((v,i)=>{const b=document.createElement("button");b.type="button";b.className="pd-variant"+(i===selectedVariantIndex?" active":"");b.disabled=v.stock==="Hết hàng";b.innerHTML=esc(v.label)+"<br><small>"+money(v.price)+"</small>";b.addEventListener("click",()=>{selectedVariantIndex=i;selectedVariantImage=v.image||null;renderPdVariants();renderPdPrice();renderPdStock();renderPdGallery();updateProductJsonLd();});box.appendChild(b);});}
+function renderPdStock(){let status=currentVariant()?.stock||currentStatus();const el=$("pdStock");el.textContent=status==="Chưa cập nhật"?"● Tình trạng tồn kho chưa được cập nhật":"● "+status;el.className="pd-stock "+(status==="Hết hàng"?"out":status==="Sắp hết"?"low":status==="Còn hàng"?"in":"");const out=status==="Hết hàng";["pdAdd","pdBuy","pdStickyAdd","pdStickyBuy"].forEach(id=>$(id).disabled=out);if(out){$("pdBuy").textContent="Báo khi có hàng qua Zalo";$("pdStickyBuy").textContent="Báo hàng";}else{$("pdBuy").textContent="⚡ MUA NGAY";$("pdStickyBuy").textContent="Mua ngay";}}
+function pdTabContent(tab){const d=currentDetail(),item=CATALOG[currentDetailProduct];if(tab==="desc")return '<b>Thông tin sản phẩm</b><ul>'+((d.desc||["Mô tả sản phẩm sẽ được cập nhật."]).map(x=>'<li>'+esc(x)+'</li>').join(""))+'</ul><p><b>Đối tượng:</b> '+esc(d.audience||"Chưa cập nhật theo thông tin sản phẩm thật.")+'</p>';if(tab==="spec")return '<div class="pd-spec-grid">'+[["Thương hiệu",d.brand],["SKU",d.sku],["Xuất xứ",d.origin],["SKU phân loại",currentVariant()?.sku],["Trọng lượng / kích thước",currentVariant()?.label||d.size],["Thành phần / chất liệu",d.material],["Hạn dùng",d.expiry]].map(([k,v])=>'<p><b>'+esc(k)+':</b> '+esc(v||"Chưa cập nhật")+'</p>').join("")+'<p><b>Bảo quản:</b> '+esc(d.storage||"Chưa cập nhật")+'</p><p><b>Tình trạng:</b> '+esc(currentVariant()?.stock||d.stock||"Chưa cập nhật")+'</p></div>';if(tab==="usage")return '<b>Hướng dẫn sử dụng</b><p>'+esc(d.usage||"Hướng dẫn sử dụng sẽ được cập nhật theo thông tin nhà sản xuất.")+'</p><p><b>Lưu ý:</b> Nếu chưa rõ thành phần hoặc kích thước, hãy hỏi shop trước khi sử dụng.</p>';if(tab==="reviews")return '<div class="pd-rating-empty">Chưa có đánh giá khách hàng được xác minh cho sản phẩm này. Phần đánh giá sẽ hiển thị khi shop có phản hồi thật.</div>';return '<p>Chưa có câu hỏi thường gặp riêng cho sản phẩm này. <a href="'+esc(zaloProductUrl(item.name))+'" target="_blank" rel="noopener">Hỏi shop qua Zalo</a>.</p>';}
+function setPdTab(tab){activeDetailTab=tab;document.querySelectorAll(".pd-tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));$("pdTabPanel").innerHTML=pdTabContent(tab);}
+function renderPdRelated(){const names=Object.keys(CATALOG).filter(n=>n!==currentDetailProduct);const together=currentDetailProduct==="Thức ăn cho chó"||currentDetailProduct==="Thức ăn cho mèo"?["Đồ chơi thú cưng","Nơ & phụ kiện"]:currentDetailProduct==="Đồ chơi thú cưng"||currentDetailProduct==="Xương gặm cho chó"?["Thức ăn cho chó","Nơ & phụ kiện"]:["Thức ăn cho chó","Đồ chơi thú cưng"];function fill(id,list){$(id).innerHTML=list.filter(n=>CATALOG[n]).map(n=>'<button class="pd-related-item" data-open-product="'+esc(n)+'"><span>'+esc(CATALOG[n].emoji||"🐾")+'</span><b>'+esc(n)+'</b><small>'+money(CATALOG[n].price)+'</small></button>').join("");}fill("pdTogether",together);fill("pdSimilar",names.slice(0,4));}
+function updateProductJsonLd(){let node=document.getElementById("pdProductJsonLd");if(!node){node=document.createElement("script");node.id="pdProductJsonLd";node.type="application/ld+json";document.head.appendChild(node);}const item=CATALOG[currentDetailProduct],d=currentDetail(),status=currentVariant()?.stock||d.stock||"Còn hàng";node.textContent=JSON.stringify({"@context":"https://schema.org/","@type":"Product",name:item.name,description:(d.desc||[]).join(" "),sku:d.sku||undefined,brand:d.brand?{"@type":"Brand",name:d.brand}:undefined,offers:{"@type":"Offer",price:currentPrice(),priceCurrency:"VND",availability:status==="Hết hàng"?"https://schema.org/OutOfStock":status==="Sắp hết"?"https://schema.org/LimitedAvailability":status==="Còn hàng"?"https://schema.org/InStock":undefined,url:location.href.split("#")[0]+"#san-pham/"+productSlug(item.name)}});}
+function zaloProductUrl(name){const digits=(SHOP.zalo||SHOP.phone||"").replace(/\D/g,"");return "https://zalo.me/"+digits+"?text="+encodeURIComponent("Chào shop, mình muốn hỏi về sản phẩm: "+name);}
+function openProductDetail(name, updateHash=true){const item=CATALOG[name];if(!item)return;currentDetailProduct=name;selectedVariantIndex=-1;selectedVariantImage=null;activeDetailTab="desc";pdLastFocus=document.activeElement;$("pdName").textContent=item.name;const d=currentDetail();$("pdTag").textContent=d.badge||"SẢN PHẨM THÚ CƯNG";$("pdMeta").innerHTML='<b>Thương hiệu:</b> '+esc(d.brand||"Chưa cập nhật")+' &nbsp;·&nbsp; <b>SKU:</b> '+esc(currentVariant()?.sku||d.sku||"Chưa cập nhật");$("pdQty").value=1;$("pdAdded").classList.remove("show");$("pdZalo").href=zaloProductUrl(name);$("pdShipping").textContent="Freeship bán kính 3km";renderPdVariants();renderPdPrice();renderPdStock();renderPdGallery();setPdTab("desc");renderPdRelated();$("productDetailModal").classList.add("show");document.body.classList.add("pd-lock");$("pdClose").focus();if(updateHash){const hash="#san-pham/"+productSlug(name);if(location.hash!==hash)history.pushState({product:name},"",hash);}updateProductJsonLd();}
+function closeProductDetail(updateHash=true){$("productDetailModal").classList.remove("show");document.body.classList.remove("pd-lock");$("pdZoom").classList.remove("show");if(updateHash&&location.hash.startsWith("#san-pham/")){history.replaceState({},"",location.pathname+location.search);}if(pdLastFocus?.focus)pdLastFocus.focus();}
+function detailAddCart(){if(!currentDetailProduct||currentStatus()==="Hết hàng"||currentVariant()?.stock==="Hết hàng")return;const name=currentDetailProduct,qty=Math.max(1,Math.min(99,parseInt($("pdQty").value,10)||1)),variant=currentVariant(),variantLabel=variant?.label||"",price=currentPrice();const it=cartData.find(i=>sameCartProduct(i,name,variantLabel));if(it){it.qty=Math.min(99,it.qty+qty);it.on=true;it.price=price;}else cartData.push({name,qty,price,variantLabel,sku:variant?.sku||currentDetail().sku||"",on:true});renderCart();$("pdAdded").classList.add("show");toast("✓ Đã thêm "+name+" vào giỏ hàng",true);["pdAdd","pdStickyAdd"].forEach(id=>{const b=$(id),old=b.textContent;b.textContent="✓ Đã thêm";setTimeout(()=>b.textContent=old,1400);});}
+function detailBuyNow(){if(!currentDetailProduct)return;if(currentStatus()==="Hết hàng"||currentVariant()?.stock==="Hết hàng"){window.open(zaloProductUrl(currentDetailProduct),"_blank","noopener");return;}const name=currentDetailProduct,qty=Math.max(1,Math.min(99,parseInt($("pdQty").value,10)||1)),variant=currentVariant();closeProductDetail();openCheckout([{name,qty,price:currentPrice(),variantLabel:variant?.label||"",sku:variant?.sku||currentDetail().sku||""}],false);}
+document.querySelectorAll(".product").forEach(card=>{const name=card.querySelector("h3").textContent.trim();card.querySelector(".product-img").addEventListener("click",()=>openProductDetail(name));card.querySelector("h3").addEventListener("click",()=>openProductDetail(name));card.querySelector(".product-hint").addEventListener("click",()=>openProductDetail(name));});
+$("pdClose").addEventListener("click",()=>closeProductDetail());$("productDetailModal").addEventListener("click",e=>{if(e.target.id==="productDetailModal")closeProductDetail();});
+$("pdMinus").addEventListener("click",()=>$("pdQty").value=Math.max(1,(parseInt($("pdQty").value,10)||1)-1));$("pdPlus").addEventListener("click",()=>$("pdQty").value=Math.min(99,(parseInt($("pdQty").value,10)||1)+1));$("pdQty").addEventListener("change",()=>$("pdQty").value=Math.max(1,Math.min(99,parseInt($("pdQty").value,10)||1)));
+["pdAdd","pdStickyAdd"].forEach(id=>$(id).addEventListener("click",detailAddCart));["pdBuy","pdStickyBuy"].forEach(id=>$(id).addEventListener("click",detailBuyNow));$("pdViewCart").addEventListener("click",()=>{closeProductDetail();openCart();});
+$("pdShare").addEventListener("click",async(e)=>{
+ e.preventDefault(); e.stopPropagation();
+ if(!currentDetailProduct){toast("Hãy mở một sản phẩm trước khi chia sẻ",false);return;}
+ const url=location.href.split("#")[0]+"#san-pham/"+productSlug(currentDetailProduct);
+ try {
+   if(navigator.share){await navigator.share({title:CATALOG[currentDetailProduct]?.name||"Sản phẩm",text:"Xem sản phẩm này tại shop:",url});return;}
+   if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(url);toast("✓ Đã sao chép link sản phẩm",false);return;}
+   const ta=document.createElement("textarea");ta.value=url;ta.readOnly=true;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,ta.value.length);
+   const copied=document.execCommand("copy");ta.remove();
+   if(copied)toast("✓ Đã sao chép link sản phẩm",false);else window.prompt("Sao chép link sản phẩm bằng Ctrl+C:",url);
+ } catch(err) {
+   if(err?.name==="AbortError")return;
+   window.prompt("Sao chép link sản phẩm bằng Ctrl+C:",url);
+ }
+});
+document.querySelectorAll(".pd-tab").forEach(b=>b.addEventListener("click",()=>setPdTab(b.dataset.tab)));document.addEventListener("click",e=>{const b=e.target.closest("[data-open-product]");if(b)openProductDetail(b.dataset.openProduct);});
+$("pdMainImage").addEventListener("click",()=>{const img=$("pdMainImage").querySelector("img");if(img){$("pdZoomImg").src=img.src;$("pdZoom").classList.add("show");}});$("pdZoom").addEventListener("click",()=>$("pdZoom").classList.remove("show"));
+let pdTouchX=0;$("pdMainImage").addEventListener("touchstart",e=>{pdTouchX=e.changedTouches[0].clientX;},{passive:true});$("pdMainImage").addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-pdTouchX;if(Math.abs(dx)>45){const item=CATALOG[currentDetailProduct],d=currentDetail(),count=[selectedVariantImage||item?.img||"",...(d.gallery||[])].filter(Boolean).length;if(count>1)renderPdImage((currentGalleryIndex+(dx<0?1:-1)+count)%count);}},{passive:true});
+window.addEventListener("hashchange",()=>{const name=detailNameFromHash();if(name){if(currentDetailProduct!==name)openProductDetail(name,false);}else if($("productDetailModal").classList.contains("show"))closeProductDetail(false);});
+window.addEventListener("popstate",()=>{const name=detailNameFromHash();if(name)openProductDetail(name,false);else closeProductDetail(false);});
+const initialDetail=detailNameFromHash();if(initialDetail)openProductDetail(initialDetail,false);
+
+document.body.insertAdjacentHTML("beforeend", `
+<div class="shop-overlay" id="shopOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng">
+  <div class="cd-head"><strong>🛒 Giỏ hàng (<span id="cdCount">0</span>)</strong><button class="cd-x" id="cdClose" aria-label="Đóng">✕</button></div>
+  <div class="cd-ship" id="cdShip" hidden></div>
+  <label class="cd-all" id="cdAllWrap"><input type="checkbox" id="cdAll"> Chọn tất cả</label>
+  <div class="cd-list" id="cdList"></div>
+  <div class="cd-foot">
+    <div class="cd-total"><span>Tạm tính:</span><b id="cdTotal">0đ</b></div>
+    <button class="cd-buy" id="cdBuy" disabled>MUA HÀNG (0)</button>
+    <a href="#products" class="cd-more" id="cdMore">← Tiếp tục mua sắm</a>
+  </div>
+</aside>
+
+<div class="co-modal" id="checkout" hidden>
+  <div class="co-box">
+    <div class="co-head"><strong>🧾 Thanh toán</strong><button class="cd-x" id="coClose" aria-label="Đóng">✕</button></div>
+
+    <form class="co-form" id="coForm">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <h4>📍 Thông tin nhận hàng</h4>
+      <div class="co-pills">
+        <label class="co-pill"><input type="radio" name="Hình thức nhận hàng" value="Giao tận nơi" checked><span>🚚 Giao tận nơi (Freeship bán kính 3km)</span></label>
+        <label class="co-pill"><input type="radio" name="Hình thức nhận hàng" value="Nhận tại cửa hàng"><span>🏪 Nhận tại cửa hàng</span></label>
+      </div>
+      <input type="text" name="Họ tên" id="coName" placeholder="Họ và tên *" autocomplete="name" required>
+      <input type="tel" name="Số điện thoại" id="coPhone" placeholder="Số điện thoại *" inputmode="tel" autocomplete="tel" required>
+      <input type="text" name="Địa chỉ" id="coAddr" placeholder="Địa chỉ nhận hàng (Ghi rõ khoảng cách nếu ở xa) *" autocomplete="street-address" required>
+      <div class="co-note" id="coPickup" hidden>🏪 Nhận tại: 42 Lê Hồng Phong, Hội An Tây, Đà Nẵng (08:00 - 18:00). Không mất phí ship.</div>
+      <textarea name="Ghi chú" placeholder="Ghi chú cho shop (không bắt buộc)"></textarea>
+
+      <h4>💳 Phương thức thanh toán</h4>
+      <div class="co-pills">
+        <label class="co-pill"><input type="radio" name="Thanh toán" value="Thanh toán khi nhận hàng (COD)" checked><span>💵 Khi nhận hàng (COD)</span></label>
+        <label class="co-pill"><input type="radio" name="Thanh toán" value="Chuyển khoản ngân hàng"><span>🏦 Chuyển khoản (Quét mã QR)</span></label>
+      </div>
+      <div class="co-note" id="coBank" hidden></div>
+
+      <div id="coVBox">
+        <h4>🎟️ Mã giảm giá</h4>
+        <div class="co-vrow"><input type="text" id="coVoucher" placeholder="Nhập mã giảm giá" autocomplete="off"><button type="button" id="coApply">ÁP DỤNG</button></div>
+        <div id="coVMsg" style="font-size:14px;margin-top:6px"></div>
+      </div>
+
+      <h4>🧾 Đơn hàng của bạn</h4>
+      <div id="coItems"></div>
+      <div id="coSums"></div>
+
+      <div class="bk-error" id="coErr">😿 Gửi đơn không thành công. Vui lòng thử lại hoặc gọi shop: 0347 654 648.</div>
+      <button type="submit" class="co-submit" id="coSubmit">ĐẶT HÀNG</button>
+    </form>
+
+    <div class="co-done" id="coDone" hidden></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="float-contact">
+  <a class="fc-call" href="tel:${SHOP.phone}" title="Gọi ngay" aria-label="Gọi ngay">📞</a>
+  <a class="fc-zalo" href="https://zalo.me/${SHOP.zalo}" target="_blank" rel="noopener" title="Chat Zalo" aria-label="Chat Zalo">Zalo</a>
+</div>
+`);
+
+const floatCart = document.querySelector(".cart");
+floatCart.innerHTML = '🛒 <span id="cartCount">0</span> món • <span id="cartTotal">0đ</span>';
+floatCart.setAttribute("onclick", "openCart()");
+
+let cartData = [];
+try {
+    cartData = (JSON.parse(localStorage.getItem("dpw_cart")) || []).filter(i => CATALOG[i.name] && i.qty > 0);
+} catch (e) { cartData = []; }
+
+function cartItemPrice(i) { return Number(i.price ?? CATALOG[i.name]?.price ?? 0); }
+function sameCartProduct(i, name, variantLabel="") { return i.name === name && (i.variantLabel || "") === (variantLabel || ""); }
+function saveCart() {
+    try { localStorage.setItem("dpw_cart", JSON.stringify(cartData)); } catch (e) {}
+}
+
+function renderCart() {
+    const count = cartData.reduce((s, i) => s + i.qty, 0);
+    const picked = cartData.filter(i => i.on);
+    const pickedQty = picked.reduce((s, i) => s + i.qty, 0);
+    const total = picked.reduce((s, i) => s + cartItemPrice(i) * i.qty, 0);
+    const all = cartData.reduce((s, i) => s + cartItemPrice(i) * i.qty, 0);
+
+    $("cartCount").textContent = count;
+    $("cartTotal").textContent = money(all);
+    $("cartBadge").textContent = count;
+    $("cdCount").textContent = count;
+    $("cdTotal").textContent = money(total);
+    $("cdBuy").textContent = "MUA HÀNG (" + pickedQty + ")";
+    $("cdBuy").disabled = pickedQty === 0;
+    $("cdAllWrap").style.display = cartData.length ? "flex" : "none";
+    $("cdAll").checked = cartData.length > 0 && cartData.every(i => i.on);
+
+    const ship = $("cdShip");
+    ship.hidden = false;
+    ship.innerHTML = '🚚 <b>Freeship bán kính 3km</b> từ cửa hàng (42 Lê Hồng Phong, Hội An Tây, Đà Nẵng)';
+
+    $("cdList").innerHTML = cartData.length ? cartData.map(i => {
+        const p = CATALOG[i.name];
+        const thumb = p.img ? '<img src="' + esc(p.img) + '" alt="">' : esc(p.emoji);
+        return '<div class="cd-item" data-index="' + cartData.indexOf(i) + '">' +
+            '<input type="checkbox" data-act="on" ' + (i.on ? "checked" : "") + ' aria-label="Chọn">' +
+            '<div class="cd-thumb">' + thumb + '</div>' +
+            '<div><div class="cd-name">' + esc(p.name) + '</div>' + (i.variantLabel ? '<div class="cd-variant">Phân loại: ' + esc(i.variantLabel) + '</div>' : '') + '<div class="cd-price">' + money(cartItemPrice(i)) + '</div>' +
+            '<div class="cd-qty"><button data-act="dec" aria-label="Giảm">−</button><span>' + i.qty + '</span><button data-act="inc" aria-label="Tăng">+</button></div></div>' +
+            '<button class="cd-del" data-act="del" aria-label="Xóa">🗑</button></div>';
+    }).join("") : '<div class="cd-empty"><div>🛒</div>Giỏ hàng đang trống<br>Hãy chọn món cho bé nhé 🐾</div>';
+
+    saveCart();
+}
+
+function lockShop(on) { document.body.classList.toggle("shop-lock", on); }
+
+function openCart() {
+    $("toast").classList.remove("show");
+    $("shopOverlay").classList.add("show");
+    $("cartDrawer").classList.add("show");
+    lockShop(true);
+}
+
+function closeShop() {
+    $("shopOverlay").classList.remove("show");
+    $("cartDrawer").classList.remove("show");
+    $("checkout").hidden = true;
+    lockShop(false);
+}
+
+let toastTimer;
+function toast(msg, withLink) {
+    const t = $("toast");
+    t.innerHTML = esc(msg) + (withLink ? ' <button id="toastCart">Xem giỏ</button>' : "");
+    t.classList.add("show");
+    const b = $("toastCart");
+    if (b) b.addEventListener("click", () => { t.classList.remove("show"); openCart(); });
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), 3000);
+}
+
+function addCart(name, ev) {
+    if (!CATALOG[name]) return;
+    const it = cartData.find(i => sameCartProduct(i, name, ""));
+    if (it) { it.qty++; it.on = true; } else cartData.push({ name, qty: 1, price: CATALOG[name].price, variantLabel: "", on: true });
+    renderCart();
+
+    floatCart.classList.remove("shake");
+    void floatCart.offsetWidth;
+    floatCart.classList.add("shake");
+
+    if (ev && ev.currentTarget) createRipple(ev.currentTarget, ev);
+    createPetEffect(window.innerWidth - 80, window.innerHeight - 90, "🛒");
+    toast("✓ Đã thêm " + name + " vào giỏ hàng", true);
+}
+
+function showCart() { openCart(); }
+
+$("navCart").addEventListener("click", e => { e.preventDefault(); openCart(); });
+$("cdClose").addEventListener("click", closeShop);
+$("coClose").addEventListener("click", closeShop);
+$("shopOverlay").addEventListener("click", closeShop);
+$("cdMore").addEventListener("click", closeShop);
+document.addEventListener("keydown", e => { if (e.key === "Escape") { closeShop(); closeProductDetail(); } });
+
+$("cdAll").addEventListener("change", e => {
+    cartData.forEach(i => i.on = e.target.checked);
+    renderCart();
+});
+
+$("cdList").addEventListener("click", e => {
+    const btn = e.target.closest("[data-act]");
+    if (!btn) return;
+    const row = btn.closest(".cd-item");
+    const it = cartData[Number(row.dataset.index)];
+    const act = btn.dataset.act;
+    if (!it) return;
+
+    if (act === "inc") it.qty = Math.min(99, it.qty + 1);
+    if (act === "dec") it.qty = Math.max(1, it.qty - 1);
+    if (act === "del") cartData = cartData.filter(i => i !== it);
+    if (act === "on") it.on = btn.checked;
+    renderCart();
+});
+
+let coItems = [], coFromCart = false, voucher = null;
+
+const coMethod = () => document.querySelector('input[name="Hình thức nhận hàng"]:checked').value;
+const coPay = () => document.querySelector('input[name="Thanh toán"]:checked').value;
+
+function calcOrder() {
+    const sub = coItems.reduce((s, i) => s + i.price * i.qty, 0);
+    let ship = 0;
+    let disc = 0;
+
+    if (voucher) {
+        if (voucher.type === "percent") disc = Math.round(sub * voucher.value / 100);
+        if (voucher.type === "amount") disc = Math.min(sub, voucher.value);
+    }
+    return { sub, ship, disc, total: sub - disc + ship };
+}
+
+function renderCheckout() {
+    const pickup = coMethod() === "Nhận tại cửa hàng";
+    const addr = $("coAddr");
+    addr.hidden = pickup;
+    addr.disabled = pickup;
+    $("coPickup").hidden = !pickup;
+
+    $("coItems").innerHTML = coItems.map(i =>
+        '<div class="co-row"><span>' + i.qty + " × " + esc(i.name) + (i.variantLabel ? " — " + esc(i.variantLabel) : "") + "</span><span>" + money(i.price * i.qty) + "</span></div>").join("");
+
+    const t = calcOrder();
+    $("coSums").innerHTML =
+        '<div class="co-row"><span>Tạm tính</span><span>' + money(t.sub) + "</span></div>" +
+        '<div class="co-row"><span>Phí vận chuyển</span><span>0đ (Freeship 3km)</span></div>' +
+        (t.disc ? '<div class="co-row"><span>Giảm giá (' + esc(voucher.code) + ')</span><span>-' + money(t.disc) + "</span></div>" : "") +
+        '<div class="co-row big"><span>Tổng thanh toán</span><span>' + money(t.total) + "</span></div>";
+
+    const bank = $("coBank");
+    if (coPay() === "Chuyển khoản ngân hàng") {
+        bank.hidden = false;
+        bank.innerHTML = '<b>Quét mã QR để chuyển khoản:</b><br>' +
+            '<div style="text-align:center;margin-top:10px;">' +
+            '<img class="qr" alt="Mã QR thanh toán VPBank" style="max-width:220px;width:100%;border:2px solid #111;" src="https://img.vietqr.io/image/' + encodeURIComponent(SHOP.bank.bankId) + "-" + encodeURIComponent(SHOP.bank.account) + '-compact2.png?amount=' + t.total + '&addInfo=DPW&accountName=' + encodeURIComponent(SHOP.bank.accountName) + '">' +
+            '</div>' +
+            '<div style="margin-top:8px;font-size:13px;">Ngân hàng: <b>' + esc(SHOP.bank.bankId) + '</b><br>Số tài khoản: <b>' + esc(SHOP.bank.account) + '</b><br>Chủ tài khoản: <b>' + esc(SHOP.bank.accountName) + '</b></div>';
+    } else {
+        bank.hidden = true;
+    }
+
+    $("coVBox").style.display = Object.keys(VOUCHERS).length ? "" : "none";
+}
+
+function openCheckout(items, fromCart) {
+    coItems = items.map(i => ({ ...CATALOG[i.name], ...i, price: Number(i.price ?? CATALOG[i.name].price), qty: i.qty }));
+    coFromCart = fromCart;
+    voucher = null;
+    $("coVoucher").value = "";
+    $("coVMsg").textContent = "";
+    $("coErr").classList.remove("show");
+    $("coForm").hidden = false;
+    $("coDone").hidden = true;
+    renderCheckout();
+    $("cartDrawer").classList.remove("show");
+    $("shopOverlay").classList.add("show");
+    $("checkout").hidden = false;
+    $("checkout").scrollTop = 0;
+    lockShop(true);
+}
+
+function buyNow(name) { openCheckout([{ name, qty: 1 }], false); }
+
+$("cdBuy").addEventListener("click", () => openCheckout(cartData.filter(i => i.on), true));
+
+$("coForm").addEventListener("change", e => { if (e.target.type === "radio") renderCheckout(); });
+
+$("coPhone").addEventListener("input", e => {
+    e.target.setCustomValidity(bkPhoneOk(e.target.value) ? "" : "Vui lòng nhập số điện thoại hợp lệ (VD: 0912345678)");
+});
+
+$("coApply").addEventListener("click", () => {
+    const code = $("coVoucher").value.trim().toUpperCase();
+    const v = VOUCHERS[code];
+    const sub = coItems.reduce((s, i) => s + i.price * i.qty, 0);
+    const msg = $("coVMsg");
+
+    if (!v) { voucher = null; msg.style.color = "#c0392b"; msg.textContent = "Mã giảm giá không hợp lệ."; }
+    else if (v.min && sub < v.min) { voucher = null; msg.style.color = "#c0392b"; msg.textContent = "Đơn hàng tối thiểu " + money(v.min) + " để dùng mã này."; }
+    else { voucher = { ...v, code }; msg.style.color = "#27ae60"; msg.textContent = "✓ Đã áp dụng mã " + code; }
+    renderCheckout();
+});
+
+$("coForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const btn = $("coSubmit");
+    const form = e.target;
+    const t = calcOrder();
+    const code = "DH-" + bkToday().slice(5).replace("-", "") + "-" + (100 + Math.floor(Math.random() * 900));
+    const fd = new FormData(form);
+    const name = fd.get("Họ tên");
+    const transfer = coPay() === "Chuyển khoản ngân hàng";
+
+    if (coMethod() === "Nhận tại cửa hàng") fd.set("Địa chỉ", "Nhận tại cửa hàng (42 Lê Hồng Phong, Hội An Tây, Đà Nẵng)");
+
+    fd.set("Mã đơn hàng", code);
+    fd.set("Sản phẩm", coItems.map(i => i.qty + " x " + i.name + (i.variantLabel ? " — Phân loại: " + i.variantLabel : "") + " (" + money(i.price) + ")").join(" | "));
+    fd.set("Tạm tính", money(t.sub));
+    fd.set("Phí ship", "0đ (Freeship 3km)");
+    if (voucher) fd.set("Mã giảm giá", voucher.code + " (-" + money(t.disc) + ")");
+    fd.set("Tổng thanh toán", money(t.total));
+    fd.set("_subject", "🛒 Đơn hàng mới " + code + " - " + name + " - " + money(t.total));
+
+    $("coErr").classList.remove("show");
+    btn.disabled = true;
+    btn.textContent = "⏳ Đang gửi đơn...";
+
+    fetch("https://formsubmit.co/ajax/linhyenthivo957@gmail.com", {
+        method: "POST", headers: { "Accept": "application/json" }, body: fd
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (String(data.success) !== "true") throw new Error(data.message);
+
+        if (coFromCart) {
+            cartData = cartData.filter(i => !coItems.some(o => sameCartProduct(i, o.name, o.variantLabel || "")));
+            renderCart();
+        }
+
+        const qr = transfer ? '<img class="qr" alt="Mã QR chuyển khoản" src="https://img.vietqr.io/image/' + encodeURIComponent(SHOP.bank.bankId) + "-" + encodeURIComponent(SHOP.bank.account) +
+              "-compact2.png?amount=" + t.total + "&addInfo=" + encodeURIComponent(code) + "&accountName=" + encodeURIComponent(SHOP.bank.accountName) + '">' +
+              '<div class="co-note">Quét mã để chuyển khoản <b>' + money(t.total) + "</b>, nội dung: <b>" + esc(code) + "</b></div>" : "";
+
+        $("coDone").innerHTML =
+            '<div class="bk-check" style="margin:auto">✓</div><h3>Đặt hàng thành công! 🎉</h3>' +
+            '<div class="co-code">Mã đơn hàng: <b>' + esc(code) + "</b></div>" +
+            '<div style="text-align:left">' + coItems.map(i => '<div class="co-row"><span>' + i.qty + " × " + esc(i.name) + (i.variantLabel ? " — " + esc(i.variantLabel) : "") + "</span><span>" + money(i.price * i.qty) + "</span></div>").join("") +
+            '<div class="co-row big"><span>Tổng thanh toán</span><span>' + money(t.total) + "</span></div></div>" + qr +
+            '<div class="co-note">Shop sẽ liên hệ xác nhận đơn qua số <b>' + esc(fd.get("Số điện thoại")) + "</b>. Bạn nhớ giữ lại mã đơn hàng nhé.</div>" +
+            '<div class="co-acts"><a href="https://zalo.me/' + SHOP.zalo + '" target="_blank" rel="noopener">💬 Nhắn Zalo cho shop</a><button type="button" id="coAgain">🛍️ Tiếp tục mua sắm</button></div>';
+
+        $("coForm").hidden = true;
+        $("coDone").hidden = false;
+        $("checkout").scrollTop = 0;
+        $("coAgain").addEventListener("click", closeShop);
+        form.reset();
+
+        ["🐶", "🐱", "🐾", "❤️", "🎉"].forEach((p, i) =>
+            setTimeout(() => createPetEffect(window.innerWidth / 2, window.innerHeight / 2, p), i * 100));
+    })
+    .catch(() => $("coErr").classList.add("show"))
+    .finally(() => { btn.disabled = false; btn.textContent = "ĐẶT HÀNG"; });
+});
+
+renderCart();
+
+const SERVICE_DETAILS = {
+    "Cắt tỉa & tạo kiểu": {
+        icon: "✂️", price: 100000, unit: "",
+        desc: "Cắt tỉa lông, tạo kiểu theo yêu cầu, giúp boss luôn đẹp trai xinh gái.",
+        includes: [], duration: "", priceTable: [], notes: [], images: []
+    },
+    "Tắm & Spa": {
+        icon: "🛁", price: 80000, unit: "",
+        desc: "Tắm sạch, sấy khô, vệ sinh tai, móng và chăm sóc da lông.",
+        includes: ["Tắm sạch", "Sấy khô", "Vệ sinh tai", "Vệ sinh móng", "Chăm sóc da lông"],
+        duration: "", priceTable: [], notes: [], images: []
+    },
+    "Làm đẹp": {
+        icon: "💅", price: 50000, unit: "",
+        desc: "Vệ sinh móng, tai, răng và chăm sóc ngoại hình cho thú cưng.",
+        includes: ["Vệ sinh móng", "Vệ sinh tai", "Vệ sinh răng", "Chăm sóc ngoại hình"],
+        duration: "", priceTable: [], notes: [], images: []
+    },
+    "Khách sạn thú cưng": {
+        icon: "🏨", price: 150000, unit: "/ngày",
+        desc: "Không gian sạch sẽ, an toàn, chăm sóc boss khi bạn đi xa.",
+        includes: [], duration: "", priceTable: [], notes: [], images: []
+    }
+};
+
+const BOOKING_SERVICES = Object.fromEntries(
+    Object.entries(SERVICE_DETAILS).map(([name, d]) => [name, d.price || 0])
+);
+
+const bkForm = document.getElementById("bookingForm");
+let bkStep = 1;
+
+function bkMoney(n) { return n.toLocaleString("vi-VN") + "đ"; }
+
+function bkToday() {
+    const d = new Date();
+    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+}
+
+function bkAddDays(str, n) {
+    const d = new Date(str + "T00:00:00");
+    d.setDate(d.getDate() + n);
+    return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+}
+
+function bkFmtDate(str) {
+    if (!str) return "";
+    const p = str.split("-");
+    return p[2] + "/" + p[1] + "/" + p[0];
+}
+
+function bkPhoneOk(v) {
+    return /^(0|\+?84)(3|5|7|8|9)\d{8}$/.test(v.replace(/[\s.\-]/g, ""));
+}
+
+function bkSelectedServices() {
+    return Array.from(bkForm.querySelectorAll('input[name="Dịch vụ"]:checked')).map(i => i.value);
+}
+
+/* Khung giờ mở cửa: 08:00 -> 18:00 */
+function bkBuildSlots() {
+    const sel = document.getElementById("bkTime");
+    const date = document.getElementById("bkDate").value;
+    const isToday = date === bkToday();
+    const nowHour = new Date().getHours();
+    const keep = sel.value;
+
+    sel.innerHTML = '<option value="">-- Chọn khung giờ --</option>';
+
+    for (let h = 8; h <= 18; h++) {
+        const t = String(h).padStart(2, "0") + ":00";
+        const o = document.createElement("option");
+        o.value = t;
+        o.textContent = t;
+        if (isToday && h <= nowHour) o.disabled = true;
+        sel.appendChild(o);
+    }
+
+    if (keep) {
+        const o = sel.querySelector('option[value="' + keep + '"]');
+        if (o && !o.disabled) sel.value = keep;
+    }
+}
+
+function bkNights() {
+    const d = document.getElementById("bkDate").value;
+    const o = document.getElementById("bkDateOut").value;
+    const el = document.getElementById("bkNights");
+    let n = 0;
+
+    if (d && o) n = Math.round((new Date(o) - new Date(d)) / 86400000);
+
+    el.textContent = n > 0 ? "Số đêm: " + n : "";
+    el.dataset.n = n > 0 ? String(n) : "";
+}
+
+function bkUpdateServices() {
+    const sel = bkSelectedServices();
+    const hotel = sel.includes("Khách sạn thú cưng");
+    const out = document.getElementById("bkDateOut");
+
+    document.getElementById("bkHotel").classList.toggle("show", hotel);
+    out.required = hotel;
+    if (!hotel) out.value = "";
+
+    bkNights();
+    document.getElementById("bkServiceErr").classList.remove("show");
+
+    const pre = document.getElementById("bkPre");
+    if (pre) {
+        pre.textContent = sel.length ? "✓ Dịch vụ đã chọn: " + sel.join(", ") : "";
+        pre.classList.toggle("show", sel.length > 0);
+    }
+
+    const est = document.getElementById("bkEstimate");
+
+    if (sel.length && sel.every(s => BOOKING_SERVICES[s] > 0)) {
+        const nights = Number(document.getElementById("bkNights").dataset.n) || 1;
+        const total = sel.reduce((sum, s) =>
+            sum + BOOKING_SERVICES[s] * (s === "Khách sạn thú cưng" ? nights : 1), 0);
+
+        est.textContent = "💰 Tạm tính: từ " + bkMoney(total) + " (giá chính thức do shop xác nhận)";
+        est.classList.add("show");
+    } else {
+        est.classList.remove("show");
+    }
+}
+
+function bkInit() {
+    const date = document.getElementById("bkDate");
+    const out = document.getElementById("bkDateOut");
+
+    date.min = bkToday();
+    out.min = bkAddDays(date.value || bkToday(), 1);
+    bkBuildSlots();
+
+    document.querySelectorAll(".bk-service").forEach(label => {
+        const name = label.querySelector("input").value;
+        const price = BOOKING_SERVICES[name];
+        label.querySelector("em").textContent = price > 0
+            ? "Từ " + bkMoney(price) + (SERVICE_DETAILS[name] && SERVICE_DETAILS[name].unit || "")
+            : "Shop báo giá khi xác nhận";
+    });
+}
+
+function bkShow(step) {
+    bkStep = step;
+    const pre = document.getElementById("bkPre");
+    if (pre) pre.classList.toggle("at1", step === 1);
+
+    bkForm.querySelectorAll(".bk-step").forEach(s =>
+        s.classList.toggle("active", Number(s.dataset.step) === step));
+
+    document.querySelectorAll(".bk-dot").forEach(d => {
+        const n = Number(d.dataset.step);
+        d.classList.toggle("active", n === step);
+        d.classList.toggle("done", n < step);
+    });
+
+    document.getElementById("bkBack").hidden = step === 1;
+    document.getElementById("bkNext").hidden = step === 3;
+    document.getElementById("bkSubmit").hidden = step !== 3;
+
+    if (step === 3) bkFill(document.getElementById("bkSummary"));
+}
+
+function bkScroll() {
+    const el = document.querySelector(".bk-progress");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function bkValidateStep(step) {
+    const box = bkForm.querySelector('.bk-step[data-step="' + step + '"]');
+    const phone = document.getElementById("bkPhone");
+
+    phone.setCustomValidity(
+        bkPhoneOk(phone.value) ? "" : "Vui lòng nhập số điện thoại hợp lệ (VD: 0912345678)"
+    );
+
+    for (const f of box.querySelectorAll("input, select, textarea")) {
+        if (f.type === "hidden" || f.offsetParent === null) continue;
+
+        if (!f.checkValidity()) {
+            f.reportValidity();
+            return false;
+        }
+    }
+
+    if (step === 2 && bkSelectedServices().length === 0) {
+        const err = document.getElementById("bkServiceErr");
+        err.classList.add("show");
+        err.scrollIntoView({ behavior: "smooth", block: "center" });
+        return false;
+    }
+
+    return true;
+}
+
+function bkRow(parent, label, value) {
+    if (!value) return;
+    const row = document.createElement("div");
+    const b = document.createElement("b");
+    const s = document.createElement("span");
+    b.textContent = label + ":";
+    s.textContent = value;
+    row.append(b, s);
+    parent.appendChild(row);
+}
+
+function bkFill(container) {
+    container.textContent = "";
+    const fd = new FormData(bkForm);
+    const date = fd.get("Ngày hẹn");
+    const time = fd.get("Khung giờ");
+
+    bkRow(container, "Khách hàng", fd.get("Tên khách hàng"));
+    bkRow(container, "Số điện thoại", fd.get("Số điện thoại"));
+    bkRow(container, "Thú cưng", [fd.get("Loại thú cưng"), fd.get("Tên thú cưng"), fd.get("Giống")].filter(Boolean).join(" • "));
+    bkRow(container, "Cân nặng", fd.get("Cân nặng"));
+    bkRow(container, "Dịch vụ", bkSelectedServices().join(", "));
+    bkRow(container, "Lịch hẹn", date ? (time ? time + " - " : "") + bkFmtDate(date) : "");
+    if (fd.get("Ngày trả")) bkRow(container, "Ngày trả", bkFmtDate(fd.get("Ngày trả")));
+}
+
+function bkReset() {
+    bkForm.reset();
+    document.getElementById("bookingDone").hidden = true;
+    document.getElementById("bkSubmitErr").classList.remove("show");
+    bkForm.hidden = false;
+    bkInit();
+    bkUpdateServices();
+    bkShow(1);
+    document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("bkNext").addEventListener("click", () => {
+    if (bkValidateStep(bkStep)) {
+        bkShow(bkStep + 1);
+        bkScroll();
+    }
+});
+
+document.getElementById("bkBack").addEventListener("click", () => {
+    bkShow(bkStep - 1);
+    bkScroll();
+});
+
+bkForm.addEventListener("keydown", e => {
+    if (e.key === "Enter" && e.target.tagName !== "TEXTAREA" && bkStep < 3) {
+        e.preventDefault();
+        document.getElementById("bkNext").click();
+    }
+});
+
+bkForm.addEventListener("change", e => {
+    const t = e.target;
+
+    if (t.name === "Dịch vụ") bkUpdateServices();
+
+    if (t.id === "bkDate") {
+        const out = document.getElementById("bkDateOut");
+        out.min = bkAddDays(t.value || bkToday(), 1);
+        if (out.value && out.value < out.min) out.value = "";
+        bkBuildSlots();
+        bkUpdateServices();
+    }
+
+    if (t.id === "bkDateOut") bkUpdateServices();
+});
+
+bkInit();
+bkUpdateServices();
+bkShow(1);
+
+function bookingSuccess(event) {
+    event.preventDefault();
+
+    for (let s = 1; s <= 3; s++) {
+        bkShow(s);
+        if (!bkValidateStep(s)) return;
+    }
+
+    const button = document.getElementById("bkSubmit");
+    const oldText = button.innerHTML;
+    const errBox = document.getElementById("bkSubmitErr");
+
+    errBox.classList.remove("show");
+    button.disabled = true;
+    button.innerHTML = "⏳ Đang gửi...";
+
+    const fd = new FormData(bkForm);
+
+    ["Dịch vụ", "Lưu ý về thú cưng"].forEach(name => {
+        const values = fd.getAll(name);
+        fd.delete(name);
+        fd.set(name, values.length ? values.join(", ") : "Không có");
+    });
+
+    if (!fd.get("email")) fd.delete("email");
+
+    const nights = document.getElementById("bkNights").dataset.n;
+    if (nights) fd.set("Số đêm", nights);
+
+    const code = "DP-" + bkToday().slice(5).replace("-", "") + "-" + (100 + Math.floor(Math.random() * 900));
+    const date = fd.get("Ngày hẹn");
+    const time = fd.get("Khung giờ");
+    const pet = fd.get("Tên thú cưng");
+    const services = fd.get("Dịch vụ");
+
+    fd.set("Mã lịch hẹn", code);
+    fd.set("_subject", "🐾 Lịch mới " + code + ": " + pet + " - " + services + " - " +
+        bkFmtDate(date).slice(0, 5) + " " + time);
+
+    fetch("https://formsubmit.co/ajax/linhyenthivo957@gmail.com", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: fd
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (String(data.success) !== "true") throw new Error(data.message);
+
+        document.getElementById("bkDonePet").textContent = pet;
+        document.getElementById("bkDoneCode").textContent = code;
+        document.getElementById("bkDonePhone").textContent = fd.get("Số điện thoại");
+        bkFill(document.getElementById("bkDoneSummary"));
+
+        const d = date.replace(/-/g, "");
+        const start = d + "T" + time.replace(":", "") + "00";
+        const end = d + "T" + String(parseInt(time, 10) + 1).padStart(2, "0") + "0000";
+
+        document.getElementById("bkCalLink").href =
+            "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+            "&text=" + encodeURIComponent("Diamonds Pet World - " + services + " (" + pet + ") - chờ shop xác nhận") +
+            "&dates=" + start + "/" + end +
+            "&ctz=Asia/Ho_Chi_Minh" +
+            "&details=" + encodeURIComponent("Mã lịch hẹn: " + code + "\nShop sẽ liên hệ xác nhận qua SĐT " + fd.get("Số điện thoại")) +
+            "&location=" + encodeURIComponent("42 Lê Hồng Phong, Hội An Tây, Đà Nẵng");
+
+        bkForm.hidden = true;
+        document.getElementById("bookingDone").hidden = false;
+        document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+
+        const x = window.innerWidth / 2;
+        const y = window.innerHeight / 2;
+        ["🐶", "🐱", "🐾", "❤️", "🎉"].forEach((p, i) => {
+            setTimeout(() => createPetEffect(x, y, p), i * 100);
+        });
+    })
+    .catch(() => {
+        errBox.classList.add("show");
+    })
+    .finally(() => {
+        button.disabled = false;
+        button.innerHTML = oldText;
+    });
+}
+
+(function () {
+    const svc = n => SERVICE_DETAILS[n];
+
+    function belowHeader(el) {
+        let top = 0;
+        document.querySelectorAll("header, nav").forEach(e => {
+            const pos = getComputedStyle(e).position;
+            if (pos === "sticky" || pos === "fixed") top = Math.max(top, e.getBoundingClientRect().bottom);
+        });
+        window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - top - 14, behavior: "smooth" });
+    }
+
+    document.body.insertAdjacentHTML("beforeend", `
+<div class="sv-modal" id="svModal" role="dialog" aria-modal="true" aria-labelledby="svTitle">
+  <div class="sv-box">
+    <button type="button" class="sv-close" id="svClose" aria-label="Đóng">✕</button>
+    <div class="sv-visual" id="svVisual"></div>
+    <div class="sv-info">
+      <span class="sv-tag">DỊCH VỤ</span>
+      <h2 id="svTitle"></h2>
+      <div class="sv-price" id="svPrice"></div>
+      <p class="sv-desc" id="svDesc"></p>
+      <div id="svSections"></div>
+      <div class="sv-note">Giá “từ” là mức bắt đầu. Shop sẽ xác nhận giá chính thức khi liên hệ với bạn.</div>
+      <div class="sv-cta">
+        <button type="button" id="svBook">📅 ĐẶT DỊCH VỤ NÀY</button>
+        <a id="svZalo" target="_blank" rel="noopener">💬 Hỏi qua Zalo</a>
+      </div>
+    </div>
+  </div>
+</div>`);
+
+    const modal = $("svModal");
+    let current = null, lastFocus = null;
+
+    function openService(name) {
+        const d = svc(name);
+        if (!d) return;
+        current = name;
+        lastFocus = document.activeElement;
+
+        $("svTitle").textContent = name;
+        $("svPrice").textContent = d.price > 0 ? "Từ " + money(d.price) + (d.unit || "") : "Liên hệ để biết giá";
+        $("svDesc").textContent = d.desc || "";
+
+        const vis = $("svVisual");
+        vis.textContent = "";
+        if (d.images && d.images.length) {
+            const main = document.createElement("img");
+            main.className = "sv-main-img"; main.src = d.images[0]; main.alt = name;
+            vis.appendChild(main);
+            if (d.images.length > 1) {
+                const th = document.createElement("div"); th.className = "sv-thumbs";
+                d.images.forEach((src, i) => {
+                    const t = document.createElement("img");
+                    t.src = src; t.alt = name + " " + (i + 1); if (i === 0) t.className = "on";
+                    t.addEventListener("click", () => {
+                        main.src = src;
+                        th.querySelectorAll("img").forEach(x => x.classList.toggle("on", x === t));
+                    });
+                    th.appendChild(t);
+                });
+                vis.appendChild(th);
+            }
+        } else {
+            const em = document.createElement("div");
+            em.className = "sv-emoji"; em.textContent = d.icon || "🐾";
+            vis.appendChild(em);
+        }
+
+        const box = $("svSections");
+        box.textContent = "";
+        const section = title => {
+            const s = document.createElement("div"); s.className = "sv-sec";
+            const h = document.createElement("h4"); h.textContent = title;
+            s.appendChild(h); box.appendChild(s); return s;
+        };
+        const list = (title, arr) => {
+            if (!arr || !arr.length) return;
+            const ul = document.createElement("ul");
+            arr.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+            section(title).appendChild(ul);
+        };
+
+        list("✅ Bao gồm", d.includes);
+        if (d.duration) { const p = document.createElement("p"); p.textContent = d.duration; section("⏱️ Thời gian thực hiện").appendChild(p); }
+        if (d.priceTable && d.priceTable.length) {
+            const t = section("💰 Giá theo cân nặng");
+            d.priceTable.forEach(r => {
+                const row = document.createElement("div"); row.className = "sv-row";
+                const a = document.createElement("span"); a.textContent = r[0];
+                const b = document.createElement("b"); b.textContent = r[1];
+                row.append(a, b); t.appendChild(row);
+            });
+        }
+        list("📌 Lưu ý trước khi đến", d.notes);
+
+        $("svZalo").href = "https://zalo.me/" + (typeof SHOP !== "undefined" ? SHOP.zalo : "");
+        modal.classList.add("show");
+        document.body.classList.add("pd-lock");
+        $("svClose").focus();
+    }
+
+    function closeService() {
+        if (!modal.classList.contains("show")) return;
+        modal.classList.remove("show");
+        document.body.classList.remove("pd-lock");
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    function bookService(name) {
+        closeService();
+        const done = $("bookingDone");
+        if (done && !done.hidden) bkReset();
+
+        const cb = Array.from(bkForm.querySelectorAll('input[name="Dịch vụ"]')).find(i => i.value === name);
+        if (cb && !cb.checked) { cb.checked = true; bkUpdateServices(); }
+
+        belowHeader(bkForm);
+        toast("✓ Đã chọn dịch vụ “" + name + "”. Bạn điền thông tin đặt lịch nhé!");
+    }
+
+    document.querySelectorAll(".service[data-service]").forEach(card => {
+        const name = card.dataset.service, d = svc(name);
+        if (!d) return;
+
+        const priceEl = card.querySelector(".price");
+        if (priceEl && d.price > 0) priceEl.textContent = "Từ " + money(d.price) + (d.unit || "");
+
+        card.insertAdjacentHTML("beforeend",
+            '<div class="sv-actions"><button type="button" class="sv-more">Xem chi tiết</button>' +
+            '<button type="button" class="sv-book">📅 Đặt dịch vụ này</button></div>');
+
+        card.querySelector(".sv-more").addEventListener("click", e => { e.stopPropagation(); openService(name); });
+        card.querySelector(".sv-book").addEventListener("click", e => { e.stopPropagation(); bookService(name); });
+        card.addEventListener("click", () => openService(name));
+    });
+
+    document.querySelectorAll("[data-goto-booking]").forEach(b =>
+        b.addEventListener("click", () => belowHeader(bkForm)));
+
+    $("svClose").addEventListener("click", closeService);
+    modal.addEventListener("click", e => { if (e.target === modal) closeService(); });
+    $("svBook").addEventListener("click", () => bookService(current));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closeService(); });
+})();
+
+document.addEventListener("click", function(event) {
+    if (
+        event.target.closest(".logo") ||
+        event.target.closest("nav a") ||
+        event.target.closest(".btn") ||
+        event.target.closest(".buy") ||
+        event.target.closest(".booking-form button") ||
+        event.target.closest(".cart")
+    ) {
+        return;
+    }
+
+    createPawEffect(event.clientX, event.clientY);
+});
+</script>
+
+
+
+</body>
+
+</html>
